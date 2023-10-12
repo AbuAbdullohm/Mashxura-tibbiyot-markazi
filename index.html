@@ -1,11 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/main-page.css" />
     <title>MASHHURA</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header container">
+        <div class="header-logo">
+          <a href="#">
+            <img src="images/logo.svg" alt="" />
+          </a>
+        </div>
+
+        <div class="header-search">
+          <img src="images/icons/search.svg" alt="img" />
+          <input type="search" placeholder="Поиск в клинике" />
+        </div>
+        <div class="header-lang">
+          <div class="lang-main">
+            <div class="lang-icon">
+              <img src="images/icons/russian.svg" alt="flag" />
+            </div>
+            <span>Русский</span>
+            <div class="chevron-down">
+              <img src="images/icons/chevron-down.svg" alt="chevron-down" />
+            </div>
+          </div>
+
+          <div class="lang-other">
+            <img src="images/icons/uzbek.svg" alt="" />
+            <span>Uzbek</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-menu__wrapper">
+        <div class="header-menu container">
+          <div class="header-menu__items">
+            <ul>
+              <li class="menu-item">Главная</li>
+              <li class="menu-item">
+                О нас
+
+                <img src="images/icons/chevron-down.svg" alt="" />
+              </li>
+              <li class="menu-item">Услуги</li>
+              <li class="menu-item">Специалисты</li>
+              <li class="menu-item">О болезнях</li>
+              <li class="menu-item">Новости</li>
+              <li class="menu-item">Отзывы</li>
+              <li class="menu-item">Контакты</li>
+            </ul>
+          </div>
+          <div class="header-menu__buttons">
+            <div class="contact-menu">
+              <div class="contact-main">
+                <img src="images/icons/telephone-3.svg" alt="" />
+                <span>Связаться с нами</span>
+              </div>
+              <div class="contact-numbers">
+                <div class="call-center">
+                  <img src="images/icons/telephone-1.svg" alt="phone" />
+                  <div>
+                    <span>Колл-центр</span>
+                    <strong>1223</strong>
+                  </div>
+                </div>
+                <div class="call-phone">
+                  <img src="images/icons/telephone-2.svg" alt="phone" />
+
+                  <div>
+                    <span>Телефон</span>
+                    <strong>+998 (78) 140-00-10</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-message">
+              <button>Записаться на приём</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="about-us__wrapper">
+      <div class="about-us container">
+        <div class="about-us__upper">
+          <div class="about-us__title">О нас</div>
+          <div class="about-us__text">
+            <strong>«MASHHURA»</strong> – это многопрофильный медицинский центр,
+            который отличается своей особенностью. Клиника оснащена современным
+            оборудованием от таких зарубежных производителей, как GE HealthCare,
+            Alma, Dornier, Olympus и другие
+          </div>
+        </div>
+        <div class="about-us__card">
+          <div class="card">
+            <div class="card-title">5 лет</div>
+            <div class="card-description">Заботимся о здоровье и красоте</div>
+          </div>
+          <div class="card">
+            <div class="card-title">55</div>
+            <div class="card-description">
+              Специалистов с многолетним опытом и зарубежной практикой
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">300 120</div>
+            <div class="card-description">Довольных пациентов</div>
+          </div>
+        </div>
+      </div>
+      <div class="background-image">
+        <img src="./images/about-us-section.png" alt="" />
+        <div class="gradient"></div>
+      </div>
+    </section>
+
+    <section class="online-consultation container">
+      <div class="consultation-main">
+        <div class="consultation-title">Онлайн консультации с врачами</div>
+        <div class="consultation-type">
+          <div class="type-title">Выберите тему</div>
+          <div class="type-buttons">
+            <button class="active" type="submit">Взрослые</button>
+            <button type="submit">Дети</button>
+          </div>
+        </div>
+        <div class="help-btn">
+          <div class="help-btn-main">
+            <span>Помощь</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                d="M15 7.5L10 12.5L5 7.5"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="help-btn-others">
+            <a href="https://telegram.org/">
+              <img src="images/icons/telegram-white.svg" alt="telegram-white" />
+              <span>Telegram</span>
+            </a>
+            <a href="https://www.whatsapp.com/">
+              <img src="images/icons/whatsapp.svg" alt="whatsapp" />
+              <span>Whatsapp</span>
+            </a>
+            <a href="#">
+              <img src="images/icons/telephone-4.svg" alt="phone" />
+              <span>Обратный звонок</span>
+            </a>
+            <a href="#">
+              <img src="images/icons/message-circle.svg" alt="message" />
+              <span>Отправить сообщение</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="consultation-slider">
+        <div class="slide-arrow">
+          <span id="left">
+            <img
+              class="left"
+              src="./images/icons/chevron-down.svg"
+              alt="chevron"
+            />
+          </span>
+
+          <span id="right">
+            <img
+              class="right"
+              src="./images/icons/chevron-down.svg"
+              alt="chevron"
+            />
+          </span>
+        </div>
+
+        <div class="carousel">
+          <div class="slide">
+            <div class="slide-img">
+              <img src="images/med-icons/icon-1.svg" alt="" />
+            </div>
+            <div class="slide-name">Боль в спине</div>
+          </div>
+          <div class="slide">
+            <div class="slide-img">
+              <img src="images/med-icons/breathing.svg" alt="" />
+            </div>
+            <div class="slide-name">Боль в горле</div>
+          </div>
+          <div class="slide">
+            <div class="slide-img">
+              <img src="images/med-icons/icon-2.svg" alt="" />
+            </div>
+            <div class="slide-name">Беременность и роды</div>
+          </div>
+          <div class="slide">
+            <div class="slide-img">
+              <img src="images/med-icons/icon-3.svg" alt="" />
+            </div>
+            <div class="slide-name">Боль в суствавах</div>
+          </div>
+          <div class="slide">
+            <div class="slide-img">
+              <img src="images/med-icons/icon-4.svg" alt="" />
+            </div>
+            <div class="slide-name">Проблемы с зубами</div>
+          </div>
+          <div class="slide">
+            <div class="slide-img">
+              <img src="images/med-icons/icon-5.svg" alt="" />
+            </div>
+            <div class="slide-name">Проблемы с мочеиспусканием</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages-wrapper">
+      <div class="advantages container">
+        <div class="advantages-buttons">
+          <button class="active">Забота о пациенте</button>
+          <button>Комплексный подход</button>
+          <button>Лабораторная диагностика</button>
+          <button>Оборудование</button>
+        </div>
+        <div class="advantages-content">
+          <p>
+            Каждый пациент - это человек, который нуждается в индивидуальном
+            подходе и внимании к его проблеме. Задача современного врача -
+            сформировать партнерские отношения с любым обратившимся в клинику.
+            Это значит, что доктор должен рассказать все о заболевании и его
+            причинах, предложить варианты решения проблемы и совместно с
+            пациентом, с учетом его индивидуальных особенностей, найти наилучший
+            путь к выздоровлению.
+          </p><br><br>
+          <p>
+            Именно такой подход применяется в многопрофильном центре
+            <span>«MASHHURA»</span>. Наши врачи регулярно проходят курсы
+            профессиональной переподготовки и обучаются формированию
+            доверительного отношения с пациентами. Удобное расписание,
+            достаточное количество времени на прием - здесь сделано все, чтобы
+            пациенту было комфортно.
+          </p>
+        </div>
+        <div class="background-image">
+          <img src="./images/advantages-image.png" alt="" />
+          <div class="gradient"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services container"></section>
+    <script src="js-files/js.js"></script>
+  </body>
 </html>

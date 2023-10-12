@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(../Gilroy-Medium.ttf);
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gilroy-Medium', sans-serif;
+}
+
+
+.container{
+  max-width: 1440px;
+  padding: 0 96px;
+  margin: 0 auto;
+}
+
+ul{
+  list-style: none;
+}
