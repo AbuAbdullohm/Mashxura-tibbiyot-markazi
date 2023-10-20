@@ -113,6 +113,11 @@
   gap: 4px;
   cursor: pointer;
 }
+.header-menu__items ul li a {
+  display: flex;
+  color: #000;
+  text-decoration: none;
+}
 
 .contact-menu {
   position: relative;
@@ -191,7 +196,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 64px 96px;
+  padding: 64px;
 }
 .about-us__wrapper .background-image {
   position: absolute;
@@ -241,7 +246,6 @@
   height: 136px;
   padding: 16px;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   gap: 16px;
   border-radius: 8px;
@@ -298,8 +302,9 @@
   font-weight: 600;
   line-height: 20px;
 }
-.consultation-main .help-btn-main span {
-  display: block;
+.consultation-main .help-btn-main p,
+.consultation-main .help-btn-main svg {
+  pointer-events: none;
 }
 .consultation-main .help-btn-others {
   flex-direction: column-reverse;
@@ -441,7 +446,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 64px 96px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   gap: 32px;
 }
 .advantages-wrapper .advantages .background-image {
@@ -476,7 +482,7 @@
   border-radius: 6px;
   font-size: 16px;
   color: #66686c;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background: #fff;
   border: 1px solid #fff;
   cursor: pointer;
@@ -625,12 +631,11 @@
 .specialists-cards .carousel .card .candidate-wrapper {
   padding: 20px;
 }
-
-.card-description {
+.specialists-cards .card-description {
   position: relative;
   padding: 0 16px;
 }
-.card-description .candidate-degree {
+.specialists-cards .card-description .candidate-degree {
   position: absolute;
   transform: translateX(-10px) translateY(-18px);
   color: #fff;
@@ -642,14 +647,14 @@
   font-weight: 400;
   line-height: 16px;
 }
-.card-description .candidate-seniority {
+.specialists-cards .card-description .candidate-seniority {
   margin-top: 24px;
   margin-bottom: 16px;
   font-size: 16px;
   font-weight: 600;
   line-height: 18px;
 }
-.card-description .consult-price {
+.specialists-cards .card-description .consult-price {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -658,12 +663,12 @@
   border-radius: 8px;
   border: 1px solid #ededed;
 }
-.card-description .consult-price .price-title {
+.specialists-cards .card-description .consult-price .price-title {
   color: rgba(0, 4, 10, 0.5);
   font-size: 14px;
   font-weight: 400;
 }
-.card-description .consult-price .price {
+.specialists-cards .card-description .consult-price .price {
   font-size: 16px;
   font-weight: 600;
 }
@@ -960,6 +965,12 @@
 .map-section {
   margin-bottom: 64px;
 }
+.map-section .map-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 32px;
+}
 
 .yandex-map .popup {
   display: none !important;
@@ -1100,4 +1111,4 @@ footer {
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
-}/*# sourceMappingURL=main-page.css.map */
+}/*# sourceMappingURL=index.css.map */

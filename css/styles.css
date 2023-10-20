@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Gilroy-Medium";
-  src: url(../Gilroy-Medium.ttf);
+  src: url(Gilroy-Medium.ttf);
 }
 *,
 *::before,
@@ -15,6 +15,11 @@
   max-width: 1440px;
   padding: 0 96px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    padding: 0 70px;
+  }
 }
 
 ul {
