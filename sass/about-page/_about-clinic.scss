@@ -1,0 +1,30 @@
+.about-clinic {
+  max-width: 960px;
+  margin: 0 auto 64px;
+
+  &-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+
+  &-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.08px;
+    margin-bottom: 32px;
+    padding: 0 20px;
+
+    span {
+      color: #7007ca;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.08px;
+    }
+  }
+}

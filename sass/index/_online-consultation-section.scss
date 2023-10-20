@@ -26,11 +26,10 @@
     align-items: self-end;
     z-index: 99;
     gap: 12px;
+    transition: opacity 1s ease;
 
     &-main {
-      width: max-content;
       display: flex;
-      align-items: center;
       gap: 5px;
       padding: 12px 20px;
       border-radius: 50px;
@@ -40,14 +39,19 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 20px;
+
+      p,
+      svg {
+        pointer-events: none;
+      }
     }
 
     &-others {
-      display: flex;
       flex-direction: column-reverse;
       gap: 12px;
       align-items: flex-end;
       display: none;
+      opacity: 0;
 
       a {
         display: flex;

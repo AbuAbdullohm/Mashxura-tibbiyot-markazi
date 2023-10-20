@@ -125,6 +125,12 @@
       align-items: flex-end;
       gap: 4px;
       cursor: pointer;
+
+      a{
+        display: flex;
+        color: #000;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -157,6 +163,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 99;
 
     span {
       color: #66686c;
