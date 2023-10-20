@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/main-page.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>MASHHURA</title>
   </head>
   <body>
+
     <div class="header-wrapper">
       <div class="header container">
         <div class="header-logo">
@@ -43,18 +44,19 @@
         <div class="header-menu container">
           <div class="header-menu__items">
             <ul>
-              <li class="menu-item">Главная</li>
+              <li class="menu-item"><a href="index.html">Главная</a></li>
               <li class="menu-item">
-                О нас
-
-                <img src="images/icons/chevron-down.svg" alt="" />
+                <a href="about-page.html">
+                  О нас
+                  <img src="images/icons/chevron-down.svg" alt="" />
+                </a>
               </li>
-              <li class="menu-item">Услуги</li>
-              <li class="menu-item">Специалисты</li>
-              <li class="menu-item">О болезнях</li>
-              <li class="menu-item">Новости</li>
-              <li class="menu-item">Отзывы</li>
-              <li class="menu-item">Контакты</li>
+              <li class="menu-item"><a href="services-page.html">Услуги</a></li>
+              <li class="menu-item"><a href="#">Специалисты</a></li>
+              <li class="menu-item"><a href="#">О болезнях</a></li>
+              <li class="menu-item"><a href="#">Новости</a></li>
+              <li class="menu-item"><a href="#">Отзывы</a></li>
+              <li class="menu-item"><a href="#">Контакты</a></li>
             </ul>
           </div>
           <div class="header-menu__buttons">
@@ -129,13 +131,13 @@
         <div class="consultation-type">
           <div class="type-title">Выберите тему</div>
           <div class="type-buttons">
-            <button class="active" type="submit">Взрослые</button>
-            <button type="submit">Дети</button>
+            <button class="consult-btn-1 active" type="submit">Взрослые</button>
+            <button class="consult-btn-2" type="submit">Дети</button>
           </div>
         </div>
         <div class="help-btn">
-          <div class="help-btn-main">
-            <span>Помощь</span>
+          <div id="help-btn-main" class="help-btn-main">
+            <p>Помощь</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -172,6 +174,7 @@
           </div>
         </div>
       </div>
+      
       <div class="consultation-slider">
         <div class="slide-arrow">
           <span id="left">
@@ -249,7 +252,8 @@
             причинах, предложить варианты решения проблемы и совместно с
             пациентом, с учетом его индивидуальных особенностей, найти наилучший
             путь к выздоровлению.
-          </p><br><br>
+          </p>
+          <br /><br />
           <p>
             Именно такой подход применяется в многопрофильном центре
             <span>«MASHHURA»</span>. Наши врачи регулярно проходят курсы
@@ -266,7 +270,740 @@
       </div>
     </section>
 
-    <section class="services container"></section>
+    <section class="services container">
+      <div class="services-title">Медицинские услуги</div>
+
+      <div class="services-cards">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/uslugi/image-1.png" alt="uslugi" />
+          </div>
+          <div class="card-content">
+            <div class="card-content__title">Гастроэнтерология</div>
+            <div class="card-content__description">
+              Наука желудочно-кишечного тракта
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/uslugi/image-1.png" alt="uslugi" />
+          </div>
+          <div class="card-content">
+            <div class="card-content__title">Гастроэнтерология</div>
+            <div class="card-content__description">
+              Наука желудочно-кишечного тракта
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/uslugi/image-2.png" alt="uslugi" />
+          </div>
+          <div class="card-content">
+            <div class="card-content__title">Гастроэнтерология</div>
+            <div class="card-content__description">
+              Наука желудочно-кишечного тракта
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/uslugi/image-2.png" alt="uslugi" />
+          </div>
+          <div class="card-content">
+            <div class="card-content__title">Гастроэнтерология</div>
+            <div class="card-content__description">
+              Наука желудочно-кишечного тракта
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/uslugi/image-3.png" alt="uslugi" />
+          </div>
+          <div class="card-content">
+            <div class="card-content__title">Урология</div>
+            <div class="card-content__description">
+              Наука мочеполовой системы
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/uslugi/image-3.png" alt="uslugi" />
+          </div>
+          <div class="card-content">
+            <div class="card-content__title">Урология</div>
+            <div class="card-content__description">
+              Наука мочеполовой системы
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/uslugi/image-4.png" alt="uslugi" />
+          </div>
+          <div class="card-content">
+            <div class="card-content__title">Аллергология</div>
+            <div class="card-content__description">
+              Специалист по психологическому благополучию
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/uslugi/image-4.png" alt="uslugi" />
+          </div>
+          <div class="card-content">
+            <div class="card-content__title">Аллергология</div>
+            <div class="card-content__description">
+              Специалист по психологическому благополучию
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="more-cards" class="more-cards">Все направления</div>
+    </section>
+
+    <section class="specialists-wrapper">
+      <div class="specialists container">
+        <div class="specialists-title">Специалисты</div>
+
+        <div class="specialists-cards">
+          <div class="slide-arrow">
+            <span id="left">
+              <img
+                class="left"
+                src="./images/icons/chevron-down.svg"
+                alt="chevron"
+              />
+            </span>
+
+            <span id="right">
+              <img
+                class="right"
+                src="./images/icons/chevron-down.svg"
+                alt="chevron"
+              />
+            </span>
+          </div>
+
+          <div class="carousel">
+            <div class="card">
+              <div>
+                <div class="card-img">
+                  <img src="images/doctor-1.png" alt="doctor" />
+                </div>
+                <div class="card-description">
+                  <span class="candidate-degree">Кандидат наук</span>
+                  <span class="candidate-seniority">Стаж работы от 15 лет</span>
+                  <div class="consult-price">
+                    <span class="price-title"> Стоимость консультации </span>
+                    <span class="price">120 000 сум</span>
+                  </div>
+                </div>
+              </div>
+              <div class="candidate-wrapper">
+                <div class="candidate">
+                  <div class="candidate-name">Хубулов Тимур Владимирович</div>
+                  <div class="candidate-specialty">
+                    <span>Травматолог</span>
+                    <span>Терапевт</span>
+                    <span>Ортопед</span>
+                    <span>УЗИ-специалист</span>
+                  </div>
+                </div>
+                <div class="appointment-time">
+                  <span class="appointment-title">
+                    Выберите удобное время для приёма
+                  </span>
+                  <div class="appointment-day">
+                    <img
+                      class="left"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                    <span>12 октября (пн)</span>
+                    <img
+                      class="right"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="appointment-clock">
+                    <span class="time">09:00</span>
+                    <span class="time">10:00</span>
+                    <span class="time">11:00</span>
+                    <span class="time">12:00</span>
+                    <span class="time">13:00</span>
+                    <span class="time">14:00</span>
+                    <span class="time">15:00</span>
+                    <span id="add-time" class="time">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="chevron-down">
+                          <path
+                            id="Vector"
+                            d="M4 6L8 10L12 6"
+                            stroke="#ffffff"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="candidate-more">Подробнее о специалисте</div>
+              </div>
+            </div>
+            <div class="card">
+              <div>
+                <div class="card-img">
+                  <img src="images/doctor-2.png" alt="doctor" />
+                </div>
+                <div class="card-description">
+                  <span class="candidate-degree">Кандидат наук</span>
+                  <span class="candidate-seniority">Стаж работы от 13 лет</span>
+                  <div class="consult-price">
+                    <span class="price-title"> Стоимость консультации </span>
+                    <span class="price">150 000 сум</span>
+                  </div>
+                </div>
+              </div>
+              <div class="candidate-wrapper">
+                <div class="candidate">
+                  <div class="candidate-name">Хубулов Тимур Владимирович</div>
+                  <div class="candidate-specialty">
+                    <span>Травматолог</span>
+                    <span>Терапевт</span>
+                    <span>Ортопед</span>
+                    <span>УЗИ-специалист</span>
+                  </div>
+                </div>
+                <div class="appointment-time">
+                  <span class="appointment-title">
+                    Выберите удобное время для приёма
+                  </span>
+                  <div class="appointment-day">
+                    <img
+                      class="left"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                    <span>12 октября (пн)</span>
+                    <img
+                      class="right"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="appointment-clock">
+                    <span class="time">09:00</span>
+                    <span class="time">10:00</span>
+                    <span class="time">11:00</span>
+                    <span class="time">12:00</span>
+                    <span class="time">13:00</span>
+                    <span class="time">14:00</span>
+                    <span class="time">15:00</span>
+                    <span id="add-time" class="time">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="chevron-down">
+                          <path
+                            id="Vector"
+                            d="M4 6L8 10L12 6"
+                            stroke="#ffffff"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="candidate-more">Подробнее о специалисте</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="more-specailists" class="more-specialists">
+            <p>Посмотреть всех специалистов</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="news container">
+        <div class="news-header">
+          <div class="news-header__title">Новости</div>
+          <div class="view-more-button">
+            <span>Смотреть все</span>
+            <img src="images/icons/chevron-down.svg" alt="chevron" />
+          </div>
+        </div>
+        <div class="news-cards">
+          <div class="cards">
+            <div class="cards-image">
+              <img src="images/news-image-1.png" alt="img" />
+            </div>
+            <div class="cards-content">
+              <div class="cards-content-title">
+                Организуется бесплатная диагностика
+              </div>
+              <p class="cards-content-text">
+                Дорогие пациенты, 21.09.2023 года организуется бесплатная
+                диагностика у нас в клинике. Успейте зарегистрироваться и
+                бронируйте места...
+              </p>
+              <div class="cards-content-more">
+                <div class="more-date">28.10.2023</div>
+                <div class="more-btn">Подробнее</div>
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="cards-image">
+              <img src="images/news-image-1.png" alt="img" />
+            </div>
+            <div class="cards-content">
+              <div class="cards-content-title">
+                Организуется бесплатная диагностика
+              </div>
+              <p class="cards-content-text">
+                Дорогие пациенты, 21.09.2023 года организуется бесплатная
+                диагностика у нас в клинике. Успейте зарегистрироваться и
+                бронируйте места...
+              </p>
+              <div class="cards-content-more">
+                <div class="more-date">28.10.2023</div>
+                <div class="more-btn">Подробнее</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedbacks-wrapper">
+      <div class="feedbacks container">
+        <div class="feedbacks-title">Пациенты о нас</div>
+
+        <div class="feedbacks-cards">
+          <div class="slide-arrow">
+            <span id="left">
+              <img
+                class="left"
+                src="./images/icons/chevron-down.svg"
+                alt="chevron"
+              />
+            </span>
+
+            <span id="right">
+              <img
+                class="right"
+                src="./images/icons/chevron-down.svg"
+                alt="chevron"
+              />
+            </span>
+          </div>
+
+          <div class="carousel">
+            <div class="card">
+              <div class="card-header">
+                <span class="author-name">Наргиза</span>
+                <div class="author-rate">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#d9d9d9"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-text">
+                <div class="quote-icon">
+                  <img src="images/icons/quote.svg" alt="quote" />
+                </div>
+                <p>
+                  Отношение чуткое. Внимательное. Профессионал своего дела,
+                  любит свою работу и со всей ответственностью относится к ней.
+                  Самый лучший! Желаю Вам здоровья, семейного благополучия,
+                  долгих лет жизни. Низкий Вам поклон!
+                </p>
+
+                <div class="feedback-date">10.12.2022</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="author-name">Наргиза</span>
+                <div class="author-rate">
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#d9d9d9"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-text">
+                <div class="quote-icon">
+                  <img src="images/icons/quote.svg" alt="quote" />
+                </div>
+                <p>
+                  Отношение чуткое. Внимательное. Профессионал своего дела,
+                  любит свою работу и со всей ответственностью относится к ней.
+                  Самый лучший! Желаю Вам здоровья, семейного благополучия,
+                  долгих лет жизни. Низкий Вам поклон!
+                </p>
+
+                <div class="feedback-date">10.12.2022</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="author-name">Анонимно</span>
+                <div class="author-rate">
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#d9d9d9"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-text">
+                <div class="quote-icon">
+                  <img src="images/icons/quote.svg" alt="quote" />
+                </div>
+                <p>
+                  Отношение чуткое. Внимательное. Профессионал своего дела,
+                  любит свою работу и со всей ответственностью относится к ней.
+                  Самый лучший! Желаю Вам здоровья, семейного благополучия,
+                  долгих лет жизни. Низкий Вам поклон!
+                </p>
+
+                <div class="feedback-date">10.12.2022</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="make-feedback">
+            <p>Оставить отзыв</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section container">
+      <div class="map-title">Адрес клиники</div>
+      <div class="map">
+        <div style="position: relative; overflow: hidden">
+          <a
+            href="https://yandex.uz/maps/org/68626133163/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+            >Surhondaryo viloyat markaziy shifohonasi</a
+          ><a
+            href="https://yandex.uz/maps/10338/termez/category/hospital/184105956/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+            >Kattalar shifoxonasi Termizda</a
+          ><iframe
+            src="https://yandex.uz/map-widget/v1/?from=mapframe&ll=67.267742%2C37.216747&mode=poi&poi%5Bpoint%5D=67.267732%2C37.215415&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D68626133163&source=mapframe&utm_source=mapframe&z=16"
+            width="100%"
+            height="500"
+            frameborder="0"
+            allowfullscreen="true"
+            style="position: relative"
+            class="yandex-map"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-links">
+          <div class="clinic">
+            <div class="clinic-title">Клиника Mashxura</div>
+            <div class="clinic-links">
+              <a href="#">Направления</a>
+              <a href="#">Услуги</a>
+              <a href="#">Врачи</a>
+              <a href="#">Зарубежные специалисты</a>
+            </div>
+          </div>
+
+          <div class="about-center">
+            <div class="about-title">О нас</div>
+            <div class="about-links">
+              <a href="#">Наша деятельность</a>
+              <a href="#">O здоровье</a>
+              <a href="#">Команда</a>
+              <a href="#">Партнёры</a>
+              <a href="#">Оборудование</a>
+              <a href="#">Обучение</a>
+              <a href="#">Награды</a>
+              <a href="#">Карьера</a>
+            </div>
+          </div>
+
+          <div class="for-patients">
+            <div class="patients-title">Для пациентов</div>
+            <div class="patients-links">
+              <a href="#">Программа лояльности</a>
+              <a href="#">Лечение в рассрочку</a>
+              <a href="#">Для корпоративных клиентов</a>
+              <a href="#">Лечение по ФМС</a>
+              <a href="#">Лечение по ДМС</a>
+              <a href="#">Медтуризм</a>
+            </div>
+          </div>
+
+          <div class="contacts">
+            <div class="contacts-title">Контакты</div>
+            <span>Телефон: +998 (78) 140-00-10</span>
+            <span>Колл-центр: 1223</span>
+            <span>E-mail: info@mashxuratibbiyot.uz</span>
+            <div class="contacts-social">
+              <div class="social-title">Присоединяйтесь</div>
+              <div class="social-links">
+                <a href="https://telegram.org/">
+                  <img src="images/icons/telegram.svg" alt="telegram" />
+                </a>
+                <a href="https://www.instagram.com/">
+                  <img src="images/icons/instagram.svg" alt="instagram" />
+                </a>
+              </div>
+            </div>
+
+            <div class="download-btn">
+              <img src="images/icons/Download Square.svg" alt="icon" />
+              <span>Скачать прайс-лист</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-description">
+          <p>
+            Материалы (в том числе цены), размещенные на данной странице, носят
+            информационный характер и предназначены для ознакомительных целей
+            (не являются публичной офертой). Скидки не суммируются с другими
+            специальными предложениями и акциями. Необходимо
+            проконсультироваться с врачом.
+          </p>
+        </div>
+
+        <div class="section">
+          <div class="section-img">
+            <a href="index.html"
+              ><img src="images/logo-footer.svg" alt="logo"
+            /></a>
+          </div>
+          <div class="section-text">
+            <p>©Mashhura 2023. Все права защищены</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="js-files/js.js"></script>
   </body>
 </html>
