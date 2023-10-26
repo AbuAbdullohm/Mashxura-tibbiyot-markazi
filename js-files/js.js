@@ -9,23 +9,18 @@ langBtn.addEventListener("click", function () {
   }
 });
 
-
-const consultAgeBtn1 = document.querySelector(".consult-btn-1");
-const consultAgeBtn2 = document.querySelector(".consult-btn-2");
-
-consultAgeBtn1.addEventListener("click", function () {
-  if (!consultAgeBtn1.classList.contains("active")) {
-    consultAgeBtn1.classList.add("active");
-    consultAgeBtn2.classList.remove("active");
-  }
-});
-
-consultAgeBtn2.addEventListener("click", function () {
-  if (!consultAgeBtn2.classList.contains("active")) {
-    consultAgeBtn2.classList.add("active");
-    consultAgeBtn1.classList.remove("active");
-  }
-});
+const helpBtn = document.getElementById("help-btn-main");
+      helpBtn.addEventListener("click", function () {
+        if (helpBtn.classList.contains("open")) {
+          helpBtn.classList.remove("open");
+          document.querySelector(".help-btn-others").style.display = "none";
+          document.querySelector(".help-btn-others").style.opacity = "0";
+        } else {
+          helpBtn.classList.add("open");
+          document.querySelector(".help-btn-others").style.display = "flex";
+          document.querySelector(".help-btn-others").style.opacity = "1";
+        }
+      });
 
 document.onclick = function (e) {
   if (
@@ -37,10 +32,6 @@ document.onclick = function (e) {
     document.querySelector(".help-btn-others").style.opacity = "0";
   }
 };
-
-
-
-
 
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
@@ -79,8 +70,7 @@ function closeModal(modal) {
   overlay.classList.remove("opened");
 }
 
-
-//Recall modal 
+//Recall modal
 
 const openRecallButtons = document.querySelectorAll("[data-modal-target2]");
 const closeRecallButtons = document.querySelectorAll("[data-close-button2]");
@@ -119,17 +109,16 @@ function closeModal(modal) {
 }
 
 
-
 function toggleActiveClass(event) {
-  let items = document.getElementsByClassName('item-btn');
+  let items = document.getElementsByClassName("item-btn");
   for (let i = 0; i < items.length; i++) {
-    items[i].classList.remove('active');
+    items[i].classList.remove("active");
   }
 
   let clickedItem = event.target;
-  clickedItem.classList.add('active');
+  clickedItem.classList.add("active");
 
-  var content = document.getElementById('advantages-content');
-  var itemContent = clickedItem.getAttribute('data-content');
+  let content = document.getElementById("advantages-content");
+  let itemContent = clickedItem.getAttribute("data-content");
   content.textContent = itemContent;
 }
