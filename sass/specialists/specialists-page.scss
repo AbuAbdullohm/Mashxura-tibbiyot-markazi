@@ -215,16 +215,24 @@
   padding: 14px 0;
   border-radius: 8px;
   border: 1px solid #7007ca;
+  cursor: pointer;
 
   color: #7007ca;
   font-size: 16px;
   font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover{
+    color: #fff;
+    background: #7007ca;
+  }
 }
 
 .more-specialists {
   width: 100%;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 
   p {
     width: 100%;
@@ -237,6 +245,11 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #e7e7e7;
+    }
   }
 }
 
@@ -271,13 +284,14 @@
       gap: 16px;
       padding: 16px;
       border-radius: 8px;
+      color: #000;
       background: #e2dcfb;
-
+      
       &-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
+        height: 100%; 
         gap: 10px;
 
         &__title {
@@ -299,7 +313,16 @@
           width: max-content;
           background: #fff;
           padding: 12px;
+          font-size: 16px;
+          font-weight: 500;
           border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover{
+            color: #fff;
+            background: #ab4bff;
+          }
         }
       }
 
@@ -311,7 +334,6 @@
 
         img {
           height: 100%;
-          border-radius: 8px;
         }
       }
     }
@@ -380,6 +402,12 @@
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover{
+          background: #ab4bff;
+        }
       }
     }
 

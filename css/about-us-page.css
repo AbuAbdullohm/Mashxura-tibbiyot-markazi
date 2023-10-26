@@ -641,6 +641,10 @@
   color: #fff;
   background: #7007ca;
   border: 1px solid #7007ca;
+  transition: all 0.3s ease;
+}
+.advantages-buttons .active:hover {
+  background: #8803fd;
 }
 
 .advantages-content {

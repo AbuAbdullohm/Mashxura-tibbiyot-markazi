@@ -68,7 +68,12 @@
     display: flex;
     gap: 15px;
 
+    .owl-stage-outer{
+      z-index: 10;
+    }
+
     .item {
+      position: relative;
       margin: 5px 10px;
       background: var(--black-white-white, #fff);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
@@ -81,14 +86,13 @@
       border-radius: 8px;
       cursor: pointer;
       color: #000;
-      z-index: 99 !important;
 
       .slide {
         display: flex;
         align-items: center;
         flex-direction: column;
         color: #000;
-      
+
         &-img {
           display: flex;
           justify-content: center;
@@ -98,7 +102,7 @@
           border-radius: 33px;
           background: rgba(112, 7, 202, 0.05);
         }
-      
+
         &-name {
           text-align: center;
           font-size: 16px;
@@ -116,25 +120,24 @@
     top: 35%;
     width: 100%;
 
-    .owl-prev{
+    .owl-prev {
       transform: translateX(-10px);
     }
 
-    .owl-next{
+    .owl-next {
       transform: translateX(15px);
     }
 
     button {
       cursor: pointer;
       transition: all 0.3s ease;
-      z-index: 99 !important;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       border-radius: 50%;
+      z-index: 99 !important;
 
       span {
         position: relative;
         display: flex;
-        align-items: start;
         justify-content: center;
         width: 40px;
         height: 40px;
@@ -142,7 +145,6 @@
         border-radius: 50%;
         font-size: 30px;
         background: #fff;
-        z-index: 99;
 
         &:hover {
           box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
@@ -155,5 +157,3 @@
     display: none;
   }
 }
-
-

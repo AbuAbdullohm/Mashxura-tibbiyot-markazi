@@ -819,15 +819,22 @@ footer {
   padding: 14px 0;
   border-radius: 8px;
   border: 1px solid #7007ca;
+  cursor: pointer;
   color: #7007ca;
   font-size: 16px;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+.candidate-more:hover {
+  color: #fff;
+  background: #7007ca;
 }
 
 .more-specialists {
   width: 100%;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 .more-specialists p {
   width: 100%;
@@ -839,6 +846,10 @@ footer {
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
+  transition: all 0.3s ease;
+}
+.more-specialists p:hover {
+  background: #e7e7e7;
 }
 
 .special-offers {
@@ -870,6 +881,7 @@ footer {
   gap: 16px;
   padding: 16px;
   border-radius: 8px;
+  color: #000;
   background: #e2dcfb;
 }
 .special-offers .special-offers-cards .card-content {
@@ -897,7 +909,15 @@ footer {
   width: max-content;
   background: #fff;
   padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
   border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.special-offers .special-offers-cards .card-content-btn:hover {
+  color: #fff;
+  background: #ab4bff;
 }
 .special-offers .special-offers-cards .card-img {
   position: absolute;
@@ -907,7 +927,6 @@ footer {
 }
 .special-offers .special-offers-cards .card-img img {
   height: 100%;
-  border-radius: 8px;
 }
 
 .map-section__wrapper {
@@ -967,6 +986,11 @@ footer {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.map-section .form-section .form .form-btn:hover {
+  background: #ab4bff;
 }
 .map-section .form-section-subtitle {
   font-size: 13px;

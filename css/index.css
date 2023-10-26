@@ -680,7 +680,11 @@
   display: flex;
   gap: 15px;
 }
+.consultation-slider .owl-carousel .owl-stage-outer {
+  z-index: 10;
+}
 .consultation-slider .owl-carousel .item {
+  position: relative;
   margin: 5px 10px;
   background: var(--black-white-white, #fff);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
@@ -692,7 +696,6 @@
   border-radius: 8px;
   cursor: pointer;
   color: #000;
-  z-index: 99 !important;
 }
 .consultation-slider .owl-carousel .item .slide {
   display: flex;
@@ -731,14 +734,13 @@
 .consultation-slider .owl-nav button {
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 99 !important;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 50%;
+  z-index: 99 !important;
 }
 .consultation-slider .owl-nav button span {
   position: relative;
   display: flex;
-  align-items: start;
   justify-content: center;
   width: 40px;
   height: 40px;
@@ -746,7 +748,6 @@
   border-radius: 50%;
   font-size: 30px;
   background: #fff;
-  z-index: 99;
 }
 .consultation-slider .owl-nav button span:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
@@ -811,6 +812,10 @@
   color: #fff;
   background: #7007ca;
   border: 1px solid #7007ca;
+  transition: all 0.3s ease;
+}
+.advantages-buttons .active:hover {
+  background: #8803fd;
 }
 
 .advantages-content {
