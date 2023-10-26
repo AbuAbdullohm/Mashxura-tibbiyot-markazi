@@ -7,11 +7,12 @@
     <title>MASHHURA</title>
   </head>
   <body>
+    
     <div class="header-wrapper">
       <div class="header container">
         <div class="header-logo">
-          <a href="#">
-            <img src="images/logo.svg" alt="" />
+          <a href="index.html">
+            <img src="images/logo.png" alt="" />
           </a>
         </div>
 
@@ -48,8 +49,8 @@
                   <img src="images/icons/chevron-down.svg" alt="" />
                 </a>
               </li>
-              <li class="menu-item"><a href="services-page.html">Услуги</a></li>
-              <li class="menu-item"><a href="#">Специалисты</a></li>
+              <li class="menu-item"><a class="active" href="services-page.html">Услуги</a></li>
+              <li class="menu-item"><a href="specialists-page.html">Специалисты</a></li>
               <li class="menu-item"><a href="#">О болезнях</a></li>
               <li class="menu-item"><a href="#">Новости</a></li>
               <li class="menu-item"><a href="#">Отзывы</a></li>
@@ -252,7 +253,6 @@
       </div>
 
       <div class="diagnostics-cards">
-
         <div class="card">
           <div class="card-img">
             <img src="images/uslugi/image-1.png" alt="uslugi" />
@@ -348,28 +348,24 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <!-- <div id="more-cards" class="more-cards">Все направления</div> -->
     </section>
-    
+
     <section class="treatment container">
       <div class="treatment-section">
         <div class="treatment-section-title">Процедурный кабинет</div>
       </div>
 
       <div class="treatment-cards">
-
         <div class="card">
           <div class="card-img">
             <img src="images/uslugi/image-1.png" alt="uslugi" />
           </div>
           <div class="card-content">
             <div class="card-content__title">ВЛОК</div>
-            <div class="card-content__description">
-              Высокая эффективность
-            </div>
+            <div class="card-content__description">Высокая эффективность</div>
           </div>
         </div>
 
@@ -444,10 +440,118 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <!-- <div id="more-cards" class="more-cards">Все направления</div> -->
+    </section>
+
+    <section class="special-offers container">
+      <div class="special-offers-section">
+        <div class="special-offers-section-title">Специальные предложения</div>
+      </div>
+
+      <div class="special-offers-cards">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-content__title">Диагностика</div>
+            <div class="card-content__description">
+              МРТ, МСКТ, ЭЭГ, ЭКГ, УЗИ, рентген, анализы маммография,
+              колоноскопия, гастроскопия, тредмил тест, холтер
+            </div>
+            <div class="card-content-btn">Записаться на диагностику</div>
+          </div>
+          <div class="card-img">
+            <img src="images/uslugi-device.png" alt="uslugi" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-content__title">Процедурный кабинет</div>
+            <div class="card-content__description">
+              Капельницы, уколы и другие услуги в нашей клинике
+            </div>
+            <div class="card-content-btn">Подробнее</div>
+          </div>
+          <div class="card-img">
+            <img src="images/uslugi-device.png" alt="uslugi" />
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="more-cards" class="more-cards">Все направления</div> -->
+    </section>
+
+    <section class="map-section__wrapper">
+      <div class="map-section container">
+        <div class="map">
+          <div style="position: relative; overflow: hidden">
+            <a
+              href="https://yandex.uz/maps/org/68626133163/?utm_medium=mapframe&utm_source=maps"
+              style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+            >
+              Surhondaryo viloyat markaziy shifohonasi
+            </a>
+            <a
+              href="https://yandex.uz/maps/10338/termez/category/hospital/184105956/?utm_medium=mapframe&utm_source=maps"
+              style="
+                color: #eee;
+                font-size: 12px;
+                position: absolute;
+                top: 14px;
+              "
+            >
+              Kattalar shifoxonasi Termizda
+            </a>
+            <iframe
+              src="https://yandex.uz/map-widget/v1/?from=mapframe&ll=67.267742%2C37.216747&mode=poi&poi%5Bpoint%5D=67.267732%2C37.215415&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D68626133163&source=mapframe&utm_source=mapframe&z=16"
+              width="100%"
+              height="450"
+              frameborder="0"
+              allowfullscreen="true"
+              style="position: relative"
+              class="yandex-map"
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-section-title">
+            Запишитесь на прием и специалист свяжется с вами в ближайшее время
+          </div>
+          <form class="form">
+            <label for="fname"></label>
+            <input
+              class="input"
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Ваше имя"
+            />
+            <label for="lname"></label>
+            <input
+              class="input"
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Контактный телефон для подтверждения записи"
+            />
+            <textarea
+              name="comments"
+              id="comments"
+              cols="10"
+              rows="5"
+              placeholder="Комментарии"
+            >
+            </textarea>
+            <input class="form-btn" type="submit" value="Записаться" />
+          </form>
+          <div class="form-section-subtitle">
+            Нажимая кнопку «Записаться», вы предоставляете согласия на обработку
+            персональных данных и соглашаетесь с политикой конфиденциальности
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>

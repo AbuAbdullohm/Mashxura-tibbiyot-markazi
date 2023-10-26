@@ -4,17 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/index.css" />
     <title>MASHHURA</title>
   </head>
+
   <body>
 
     <div class="header-wrapper">
       <div class="header container">
         <div class="header-logo">
           <a href="#">
-            <img src="images/logo.svg" alt="" />
+            <img src="./images/logo.png" alt="logo" />
           </a>
         </div>
 
@@ -22,6 +38,7 @@
           <img src="images/icons/search.svg" alt="img" />
           <input type="search" placeholder="Поиск в клинике" />
         </div>
+
         <div class="header-lang">
           <div class="lang-main">
             <div class="lang-icon">
@@ -44,15 +61,18 @@
         <div class="header-menu container">
           <div class="header-menu__items">
             <ul>
-              <li class="menu-item"><a href="index.html">Главная</a></li>
               <li class="menu-item">
-                <a href="about-page.html">
-                  О нас
-                  <img src="images/icons/chevron-down.svg" alt="" />
+                <a class="active" href="index.html">Главная</a>
+              </li>
+              <li class="menu-item">
+                <a href="about-page.html"
+                  >О нас<img src="images/icons/chevron-down.svg" alt="" />
                 </a>
               </li>
               <li class="menu-item"><a href="services-page.html">Услуги</a></li>
-              <li class="menu-item"><a href="#">Специалисты</a></li>
+              <li class="menu-item">
+                <a href="specialists-page.html">Специалисты</a>
+              </li>
               <li class="menu-item"><a href="#">О болезнях</a></li>
               <li class="menu-item"><a href="#">Новости</a></li>
               <li class="menu-item"><a href="#">Отзывы</a></li>
@@ -67,29 +87,197 @@
               </div>
               <div class="contact-numbers">
                 <div class="call-center">
-                  <img src="images/icons/telephone-1.svg" alt="phone" />
-                  <div>
-                    <span>Колл-центр</span>
-                    <strong>1223</strong>
-                  </div>
+                  <a href="#">
+                    <img src="images/icons/telephone-1.svg" alt="phone" />
+                    <div>
+                      <span>Колл-центр</span>
+                      <strong>1223</strong>
+                    </div>
+                  </a>
                 </div>
                 <div class="call-phone">
-                  <img src="images/icons/telephone-2.svg" alt="phone" />
+                  <a href="#">
+                    <img src="images/icons/telephone-2.svg" alt="phone" />
 
-                  <div>
-                    <span>Телефон</span>
-                    <strong>+998 (78) 140-00-10</strong>
-                  </div>
+                    <div>
+                      <span>Телефон</span>
+                      <strong>+998 (78) 140-00-10</strong>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
             <div class="contact-message">
-              <button>Записаться на приём</button>
+              <a
+                data-modal-target2="#recall-modal"
+                class="open-recall-modal"
+                href="#"
+              >
+                Записаться на приём
+              </a>
+            </div>
+
+            <div class="recall-modal" id="recall-modal">
+              <div class="recall-modal-header">
+                <div class="recall-title">Оставить заявку</div>
+              </div>
+              <button data-close-button2="" class="close-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g opacity="0.7">
+                    <path
+                      d="M16 5L6 15"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6 5L16 15"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div class="recall-modal-content">
+                <div class="recall-modal__content-subtitle">
+                  Мы свяжемся с Вами в ближайшее время
+                </div>
+
+                <div class="recall-telephone">
+                  <input
+                    class="recall-phone"
+                    type="name"
+                    name="name"
+                    required
+                    placeholder="Ваше имя*"
+                  />
+                </div>
+
+                <div class="recall-telephone">
+                  <input
+                    class="recall-phone"
+                    type="number"
+                    name="tel"
+                    required
+                    value="+998"
+                  />
+                </div>
+
+                <p class="recall-modal-subtitle">
+                  Нажимая на кнопку Оставить заявку, я соглашаюсь с условиями
+                  Политики обработки персональных данных
+                </p>
+                <button
+                  type="submit"
+                  id="recall-modal-btn"
+                  class="recall-modal-btn"
+                >
+                  Оставить заявку
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="help-btn">
+        <div id="help-btn-main" class="help-btn-main">
+          <p>Помощь</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M15 7.5L10 12.5L5 7.5"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <div class="help-btn-others">
+          <a href="https://telegram.org/">
+            <img src="images/icons/telegram-white.svg" alt="telegram-white" />
+            <span>Telegram</span>
+          </a>
+          <a href="https://www.whatsapp.com/">
+            <img src="images/icons/whatsapp.svg" alt="whatsapp" />
+            <span>Whatsapp</span>
+          </a>
+          <a data-modal-target="#modal" class="open-modal" href="#">
+            <img src="images/icons/telephone-4.svg" alt="phone" />
+            <span>Обратный звонок</span>
+          </a>
+          <a href="#">
+            <img src="images/icons/message-circle.svg" alt="message" />
+            <span>Отправить сообщение</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title">Обратный звонок</div>
+        </div>
+        <button data-close-button class="close-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <g opacity="0.7">
+              <path
+                d="M16 5L6 15"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 5L16 15"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </button>
+        <div class="modal-content">
+          <p class="modal-subtitle">
+            Оставьте свой номер телефона и мы вам перезвоним
+          </p>
+          <label class="phone-number" for="tel">Номер телефона</label>
+          <input
+            class="telephone"
+            type="number"
+            name="tel"
+            required
+            value="+998"
+          />
+          <button type="submit" id="modal-btn" class="modal-btn">
+            Отправить
+          </button>
+        </div>
+      </div>
     </div>
+    <div id="overlay"></div>
 
     <section class="about-us__wrapper">
       <div class="about-us container">
@@ -118,10 +306,10 @@
             <div class="card-description">Довольных пациентов</div>
           </div>
         </div>
-      </div>
-      <div class="background-image">
-        <img src="./images/about-us-section.png" alt="" />
-        <div class="gradient"></div>
+        <div class="background-image">
+          <img src="./images/about-us-section.png" alt="" />
+          <div class="gradient"></div>
+        </div>
       </div>
     </section>
 
@@ -135,101 +323,89 @@
             <button class="consult-btn-2" type="submit">Дети</button>
           </div>
         </div>
-        <div class="help-btn">
-          <div id="help-btn-main" class="help-btn-main">
-            <p>Помощь</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M15 7.5L10 12.5L5 7.5"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div class="help-btn-others">
-            <a href="https://telegram.org/">
-              <img src="images/icons/telegram-white.svg" alt="telegram-white" />
-              <span>Telegram</span>
-            </a>
-            <a href="https://www.whatsapp.com/">
-              <img src="images/icons/whatsapp.svg" alt="whatsapp" />
-              <span>Whatsapp</span>
-            </a>
-            <a href="#">
-              <img src="images/icons/telephone-4.svg" alt="phone" />
-              <span>Обратный звонок</span>
-            </a>
-            <a href="#">
-              <img src="images/icons/message-circle.svg" alt="message" />
-              <span>Отправить сообщение</span>
-            </a>
-          </div>
-        </div>
       </div>
-      
+
       <div class="consultation-slider">
-        <div class="slide-arrow">
-          <span id="left">
-            <img
-              class="left"
-              src="./images/icons/chevron-down.svg"
-              alt="chevron"
-            />
-          </span>
-
-          <span id="right">
-            <img
-              class="right"
-              src="./images/icons/chevron-down.svg"
-              alt="chevron"
-            />
-          </span>
-        </div>
-
-        <div class="carousel">
-          <div class="slide">
-            <div class="slide-img">
-              <img src="images/med-icons/icon-1.svg" alt="" />
-            </div>
-            <div class="slide-name">Боль в спине</div>
+        <div id="owl-carousel-1" class="owl-carousel owl-theme">
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/icon-1.svg" alt="" />
+              </div>
+              <div class="slide-name">Боль в спине</div>
+            </a>
           </div>
-          <div class="slide">
-            <div class="slide-img">
-              <img src="images/med-icons/breathing.svg" alt="" />
-            </div>
-            <div class="slide-name">Боль в горле</div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/icon-5.svg" alt="" />
+              </div>
+              <div class="slide-name">Проблемы с мочеиспусканием</div>
+            </a>
           </div>
-          <div class="slide">
-            <div class="slide-img">
-              <img src="images/med-icons/icon-2.svg" alt="" />
-            </div>
-            <div class="slide-name">Беременность и роды</div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/icon-4.svg" alt="" />
+              </div>
+              <div class="slide-name">Проблемы с зубами</div>
+            </a>
           </div>
-          <div class="slide">
-            <div class="slide-img">
-              <img src="images/med-icons/icon-3.svg" alt="" />
-            </div>
-            <div class="slide-name">Боль в суствавах</div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/icon-2.svg" alt="" />
+              </div>
+              <div class="slide-name">Беременность и роды</div>
+            </a>
           </div>
-          <div class="slide">
-            <div class="slide-img">
-              <img src="images/med-icons/icon-4.svg" alt="" />
-            </div>
-            <div class="slide-name">Проблемы с зубами</div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/icon-3.svg" alt="" />
+              </div>
+              <div class="slide-name">Боль в суствавах</div>
+            </a>
           </div>
-          <div class="slide">
-            <div class="slide-img">
-              <img src="images/med-icons/icon-5.svg" alt="" />
-            </div>
-            <div class="slide-name">Проблемы с мочеиспусканием</div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/breathing.svg" alt="" />
+              </div>
+              <div class="slide-name">Боль в горле</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/icon-1.svg" alt="" />
+              </div>
+              <div class="slide-name">Боль в спине</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/icon-5.svg" alt="" />
+              </div>
+              <div class="slide-name">Проблемы с мочеиспусканием</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/breathing.svg" alt="" />
+              </div>
+              <div class="slide-name">Боль в горле</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="slide">
+              <div class="slide-img">
+                <img src="images/med-icons/icon-5.svg" alt="" />
+              </div>
+              <div class="slide-name">Проблемы с мочеиспусканием</div>
+            </a>
           </div>
         </div>
       </div>
@@ -238,30 +414,95 @@
     <section class="advantages-wrapper">
       <div class="advantages container">
         <div class="advantages-buttons">
-          <button class="active">Забота о пациенте</button>
-          <button>Комплексный подход</button>
-          <button>Лабораторная диагностика</button>
-          <button>Оборудование</button>
+          <button
+            class="item-btn active"
+            onclick="toggleActiveClass(event)"
+            data-content="Каждый пациент - это человек, который нуждается в индивидуальном
+              подходе и внимании к его проблеме. Задача современного врача -
+              сформировать партнерские отношения с любым обратившимся в клинику.
+              Это значит, что доктор должен рассказать все о заболевании и его
+              причинах, предложить варианты решения проблемы и совместно с
+              пациентом, с учетом его индивидуальных особенностей, найти наилучший
+              путь к выздоровлению.
+              Именно такой подход применяется в многопрофильном центре
+              «MASHHURA». Наши врачи регулярно проходят курсы
+              профессиональной переподготовки и обучаются формированию
+              доверительного отношения с пациентами. Удобное расписание,
+              достаточное количество времени на прием - здесь сделано все, чтобы
+              пациенту было комфортно."
+          >
+            Забота о пациенте
+          </button>
+          <button
+            class="item-btn"
+            onclick="toggleActiveClass(event)"
+            data-content="Именно такой подход применяется в многопрофильном центре
+              «MASHHURA». Наши врачи регулярно проходят курсы
+              профессиональной переподготовки и обучаются формированию
+              доверительного отношения с пациентами. Удобное расписание,
+              достаточное количество времени на прием - здесь сделано все, чтобы
+              пациенту было комфортно.
+              Каждый пациент - это человек, который нуждается в индивидуальном
+              подходе и внимании к его проблеме. Задача современного врача -
+              сформировать партнерские отношения с любым обратившимся в клинику.
+              Это значит, что доктор должен рассказать все о заболевании и его
+              причинах, предложить варианты решения проблемы и совместно с
+              пациентом, с учетом его индивидуальных особенностей, найти наилучший
+              путь к выздоровлению."
+          >
+            Комплексный подход
+          </button>
+          <button
+            class="item-btn"
+            onclick="toggleActiveClass(event)"
+            data-content=" Наши врачи регулярно проходят курсы
+              профессиональной переподготовки и обучаются формированию
+              доверительного отношения с пациентами. Удобное расписание,
+              достаточное количество времени на прием - здесь сделано все, чтобы
+              пациенту было комфортно.
+              Каждый пациент - это человек, который нуждается в индивидуальном
+              подходе и внимании к его проблеме. Задача современного врача -
+              сформировать партнерские отношения с любым обратившимся в клинику.
+              Это значит, что доктор должен рассказать все о заболевании и его
+              причинах, предложить варианты решения проблемы и совместно с
+              пациентом, с учетом его индивидуальных особенностей, найти наилучший
+              путь к выздоровлению."
+          >
+            Лабораторная диагностика
+          </button>
+          <button
+            class="item-btn"
+            onclick="toggleActiveClass(event)"
+            data-content="Задача современного врача -
+            сформировать партнерские отношения с любым обратившимся в клинику. Именно такой подход применяется в многопрофильном центре
+              «MASHHURA». Наши врачи регулярно проходят курсы
+              профессиональной переподготовки и обучаются формированию
+              доверительного отношения с пациентами. Удобное расписание,
+              достаточное количество времени на прием - здесь сделано все, чтобы
+              пациенту было комфортно.
+              Каждый пациент - это человек, который нуждается в индивидуальном
+              подходе и внимании к его проблеме. 
+              Это значит, что доктор должен рассказать все о заболевании и его
+              причинах, предложить варианты решения проблемы и совместно с
+              пациентом, с учетом его индивидуальных особенностей, найти наилучший
+              путь к выздоровлению."
+          >
+            Оборудование
+          </button>
         </div>
-        <div class="advantages-content">
-          <p>
-            Каждый пациент - это человек, который нуждается в индивидуальном
-            подходе и внимании к его проблеме. Задача современного врача -
-            сформировать партнерские отношения с любым обратившимся в клинику.
-            Это значит, что доктор должен рассказать все о заболевании и его
-            причинах, предложить варианты решения проблемы и совместно с
-            пациентом, с учетом его индивидуальных особенностей, найти наилучший
-            путь к выздоровлению.
-          </p>
-          <br /><br />
-          <p>
-            Именно такой подход применяется в многопрофильном центре
-            <span>«MASHHURA»</span>. Наши врачи регулярно проходят курсы
-            профессиональной переподготовки и обучаются формированию
-            доверительного отношения с пациентами. Удобное расписание,
-            достаточное количество времени на прием - здесь сделано все, чтобы
-            пациенту было комфортно.
-          </p>
+        <div id="advantages-content" class="advantages-content">
+          Каждый пациент - это человек, который нуждается в индивидуальном
+          подходе и внимании к его проблеме. Задача современного врача -
+          сформировать партнерские отношения с любым обратившимся в клинику. Это
+          значит, что доктор должен рассказать все о заболевании и его причинах,
+          предложить варианты решения проблемы и совместно с пациентом, с учетом
+          его индивидуальных особенностей, найти наилучший путь к выздоровлению.
+          Именно такой подход применяется в многопрофильном центре
+          <span>«MASHHURA»</span>. Наши врачи регулярно проходят курсы
+          профессиональной переподготовки и обучаются формированию
+          доверительного отношения с пациентами. Удобное расписание, достаточное
+          количество времени на прием - здесь сделано все, чтобы пациенту было
+          комфортно.
         </div>
         <div class="background-image">
           <img src="./images/advantages-image.png" alt="" />
@@ -274,7 +515,7 @@
       <div class="services-title">Медицинские услуги</div>
 
       <div class="services-cards">
-        <div class="card">
+        <a href="#" class="card">
           <div class="card-img">
             <img src="images/uslugi/image-1.png" alt="uslugi" />
           </div>
@@ -284,8 +525,9 @@
               Наука желудочно-кишечного тракта
             </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+
+        <a href="#" class="card">
           <div class="card-img">
             <img src="images/uslugi/image-1.png" alt="uslugi" />
           </div>
@@ -295,8 +537,8 @@
               Наука желудочно-кишечного тракта
             </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card">
           <div class="card-img">
             <img src="images/uslugi/image-2.png" alt="uslugi" />
           </div>
@@ -306,8 +548,8 @@
               Наука желудочно-кишечного тракта
             </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card">
           <div class="card-img">
             <img src="images/uslugi/image-2.png" alt="uslugi" />
           </div>
@@ -317,8 +559,8 @@
               Наука желудочно-кишечного тракта
             </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card">
           <div class="card-img">
             <img src="images/uslugi/image-3.png" alt="uslugi" />
           </div>
@@ -328,8 +570,8 @@
               Наука мочеполовой системы
             </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card">
           <div class="card-img">
             <img src="images/uslugi/image-3.png" alt="uslugi" />
           </div>
@@ -339,8 +581,8 @@
               Наука мочеполовой системы
             </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card">
           <div class="card-img">
             <img src="images/uslugi/image-4.png" alt="uslugi" />
           </div>
@@ -350,8 +592,8 @@
               Специалист по психологическому благополучию
             </div>
           </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="#" class="card">
           <div class="card-img">
             <img src="images/uslugi/image-4.png" alt="uslugi" />
           </div>
@@ -361,7 +603,7 @@
               Специалист по психологическому благополучию
             </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <div id="more-cards" class="more-cards">Все направления</div>
@@ -372,27 +614,9 @@
         <div class="specialists-title">Специалисты</div>
 
         <div class="specialists-cards">
-          <div class="slide-arrow">
-            <span id="left">
-              <img
-                class="left"
-                src="./images/icons/chevron-down.svg"
-                alt="chevron"
-              />
-            </span>
-
-            <span id="right">
-              <img
-                class="right"
-                src="./images/icons/chevron-down.svg"
-                alt="chevron"
-              />
-            </span>
-          </div>
-
-          <div class="carousel">
+          <div id="owl-carousel-2" class="owl-carousel owl-theme">
             <div class="card">
-              <div>
+              <div class="card-main">
                 <div class="card-img">
                   <img src="images/doctor-1.png" alt="doctor" />
                 </div>
@@ -421,12 +645,14 @@
                   </span>
                   <div class="appointment-day">
                     <img
+                      id="day-minus"
                       class="left"
                       src="images/icons/chevron-down.svg"
                       alt=""
                     />
                     <span>12 октября (пн)</span>
                     <img
+                      id="day-plus"
                       class="right"
                       src="images/icons/chevron-down.svg"
                       alt=""
@@ -440,31 +666,24 @@
                     <span class="time">13:00</span>
                     <span class="time">14:00</span>
                     <span class="time">15:00</span>
-                    <span id="add-time" class="time">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g id="chevron-down">
-                          <path
-                            id="Vector"
-                            d="M4 6L8 10L12 6"
-                            stroke="#ffffff"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                    <span class="add-time1">
+                      <img
+                        src="images/icons/chevron-up-white.svg"
+                        alt="chevron"
+                      />
+                    </span>
+                    <span class="other-time-wrapper1">
+                      <span class="time other-time">16:00</span>
+                      <span class="time other-time">17:00</span>
+                      <span class="time other-time">18:00</span>
+                      <span class="time other-time">19:00</span>
                     </span>
                   </div>
                 </div>
                 <div class="candidate-more">Подробнее о специалисте</div>
               </div>
             </div>
+
             <div class="card">
               <div>
                 <div class="card-img">
@@ -514,25 +733,270 @@
                     <span class="time">13:00</span>
                     <span class="time">14:00</span>
                     <span class="time">15:00</span>
-                    <span id="add-time" class="time">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g id="chevron-down">
-                          <path
-                            id="Vector"
-                            d="M4 6L8 10L12 6"
-                            stroke="#ffffff"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
+                    <span class="add-time2">
+                      <img src="images/icons/chevron-up-white.svg" alt="" />
+                    </span>
+                    <span class="other-time-wrapper2">
+                      <span class="time other-time">16:00</span>
+                      <span class="time other-time">17:00</span>
+                      <span class="time other-time">18:00</span>
+                      <span class="time other-time">19:00</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="candidate-more">Подробнее о специалисте</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div>
+                <div class="card-img">
+                  <img src="images/doctor-1.png" alt="doctor" />
+                </div>
+                <div class="card-description">
+                  <span class="candidate-degree">Кандидат наук</span>
+                  <span class="candidate-seniority">Стаж работы от 13 лет</span>
+                  <div class="consult-price">
+                    <span class="price-title"> Стоимость консультации </span>
+                    <span class="price">150 000 сум</span>
+                  </div>
+                </div>
+              </div>
+              <div class="candidate-wrapper">
+                <div class="candidate">
+                  <div class="candidate-name">Хубулов Тимур Владимирович</div>
+                  <div class="candidate-specialty">
+                    <span>Травматолог</span>
+                    <span>Терапевт</span>
+                    <span>Ортопед</span>
+                    <span>УЗИ-специалист</span>
+                  </div>
+                </div>
+                <div class="appointment-time">
+                  <span class="appointment-title">
+                    Выберите удобное время для приёма
+                  </span>
+                  <div class="appointment-day">
+                    <img
+                      class="left"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                    <span>12 октября (пн)</span>
+                    <img
+                      class="right"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="appointment-clock">
+                    <span class="time">09:00</span>
+                    <span class="time">10:00</span>
+                    <span class="time">11:00</span>
+                    <span class="time">12:00</span>
+                    <span class="time">13:00</span>
+                    <span class="time">14:00</span>
+                    <span class="time">15:00</span>
+                    <span class="add-time3">
+                      <img src="images/icons/chevron-up-white.svg" alt="" />
+                    </span>
+                    <span class="other-time-wrapper3">
+                      <span class="time other-time">16:00</span>
+                      <span class="time other-time">17:00</span>
+                      <span class="time other-time">18:00</span>
+                      <span class="time other-time">19:00</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="candidate-more">Подробнее о специалисте</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div>
+                <div class="card-img">
+                  <img src="images/doctor-2.png" alt="doctor" />
+                </div>
+                <div class="card-description">
+                  <span class="candidate-degree">Кандидат наук</span>
+                  <span class="candidate-seniority">Стаж работы от 13 лет</span>
+                  <div class="consult-price">
+                    <span class="price-title"> Стоимость консультации </span>
+                    <span class="price">150 000 сум</span>
+                  </div>
+                </div>
+              </div>
+              <div class="candidate-wrapper">
+                <div class="candidate">
+                  <div class="candidate-name">Хубулов Тимур Владимирович</div>
+                  <div class="candidate-specialty">
+                    <span>Травматолог</span>
+                    <span>Терапевт</span>
+                    <span>Ортопед</span>
+                    <span>УЗИ-специалист</span>
+                  </div>
+                </div>
+                <div class="appointment-time">
+                  <span class="appointment-title">
+                    Выберите удобное время для приёма
+                  </span>
+                  <div class="appointment-day">
+                    <img
+                      class="left"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                    <span>12 октября (пн)</span>
+                    <img
+                      class="right"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="appointment-clock">
+                    <span class="time">09:00</span>
+                    <span class="time">10:00</span>
+                    <span class="time">11:00</span>
+                    <span class="time">12:00</span>
+                    <span class="time">13:00</span>
+                    <span class="time">14:00</span>
+                    <span class="time">15:00</span>
+                    <span class="add-time4">
+                      <img src="images/icons/chevron-up-white.svg" alt="" />
+                    </span>
+                    <span class="other-time-wrapper4">
+                      <span class="time other-time">16:00</span>
+                      <span class="time other-time">17:00</span>
+                      <span class="time other-time">18:00</span>
+                      <span class="time other-time">19:00</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="candidate-more">Подробнее о специалисте</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div>
+                <div class="card-img">
+                  <img src="images/doctor-1.png" alt="doctor" />
+                </div>
+                <div class="card-description">
+                  <span class="candidate-degree">Кандидат наук</span>
+                  <span class="candidate-seniority">Стаж работы от 13 лет</span>
+                  <div class="consult-price">
+                    <span class="price-title"> Стоимость консультации </span>
+                    <span class="price">150 000 сум</span>
+                  </div>
+                </div>
+              </div>
+              <div class="candidate-wrapper">
+                <div class="candidate">
+                  <div class="candidate-name">Хубулов Тимур Владимирович</div>
+                  <div class="candidate-specialty">
+                    <span>Травматолог</span>
+                    <span>Терапевт</span>
+                    <span>Ортопед</span>
+                    <span>УЗИ-специалист</span>
+                  </div>
+                </div>
+                <div class="appointment-time">
+                  <span class="appointment-title">
+                    Выберите удобное время для приёма
+                  </span>
+                  <div class="appointment-day">
+                    <img
+                      class="left"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                    <span>12 октября (пн)</span>
+                    <img
+                      class="right"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="appointment-clock">
+                    <span class="time">09:00</span>
+                    <span class="time">10:00</span>
+                    <span class="time">11:00</span>
+                    <span class="time">12:00</span>
+                    <span class="time">13:00</span>
+                    <span class="time">14:00</span>
+                    <span class="time">15:00</span>
+                    <span class="add-time5">
+                      <img src="images/icons/chevron-up-white.svg" alt="" />
+                    </span>
+                    <span class="other-time-wrapper5">
+                      <span class="time other-time">16:00</span>
+                      <span class="time other-time">17:00</span>
+                      <span class="time other-time">18:00</span>
+                      <span class="time other-time">19:00</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="candidate-more">Подробнее о специалисте</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div>
+                <div class="card-img">
+                  <img src="images/doctor-2.png" alt="doctor" />
+                </div>
+                <div class="card-description">
+                  <span class="candidate-degree">Кандидат наук</span>
+                  <span class="candidate-seniority">Стаж работы от 13 лет</span>
+                  <div class="consult-price">
+                    <span class="price-title"> Стоимость консультации </span>
+                    <span class="price">150 000 сум</span>
+                  </div>
+                </div>
+              </div>
+              <div class="candidate-wrapper">
+                <div class="candidate">
+                  <div class="candidate-name">Хубулов Тимур Владимирович</div>
+                  <div class="candidate-specialty">
+                    <span>Травматолог</span>
+                    <span>Терапевт</span>
+                    <span>Ортопед</span>
+                    <span>УЗИ-специалист</span>
+                  </div>
+                </div>
+                <div class="appointment-time">
+                  <span class="appointment-title">
+                    Выберите удобное время для приёма
+                  </span>
+                  <div class="appointment-day">
+                    <img
+                      class="left"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                    <span>12 октября (пн)</span>
+                    <img
+                      class="right"
+                      src="images/icons/chevron-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="appointment-clock">
+                    <span class="time">09:00</span>
+                    <span class="time">10:00</span>
+                    <span class="time">11:00</span>
+                    <span class="time">12:00</span>
+                    <span class="time">13:00</span>
+                    <span class="time">14:00</span>
+                    <span class="time">15:00</span>
+                    <span class="add-time6">
+                      <img src="images/icons/chevron-up-white.svg" alt="" />
+                    </span>
+                    <span class="other-time-wrapper6">
+                      <span class="time other-time">16:00</span>
+                      <span class="time other-time">17:00</span>
+                      <span class="time other-time">18:00</span>
+                      <span class="time other-time">19:00</span>
                     </span>
                   </div>
                 </div>
@@ -542,7 +1006,7 @@
           </div>
 
           <div id="more-specailists" class="more-specialists">
-            <p>Посмотреть всех специалистов</p>
+            <a href="specialists-page.html">Посмотреть всех специалистов</a>
           </div>
         </div>
       </div>
@@ -552,15 +1016,29 @@
       <div class="news container">
         <div class="news-header">
           <div class="news-header__title">Новости</div>
-          <div class="view-more-button">
+          <a href="#" class="view-more-button">
             <span>Смотреть все</span>
-            <img src="images/icons/chevron-down.svg" alt="chevron" />
-          </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                d="M7.5 15L12.5 10L7.5 5"
+                stroke="#66686C"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
         </div>
         <div class="news-cards">
           <div class="cards">
             <div class="cards-image">
-              <img src="images/news-image-1.png" alt="img" />
+              <img src="images/news-image-1.jpg" alt="img" />
             </div>
             <div class="cards-content">
               <div class="cards-content-title">
@@ -573,13 +1051,13 @@
               </p>
               <div class="cards-content-more">
                 <div class="more-date">28.10.2023</div>
-                <div class="more-btn">Подробнее</div>
+                <div class="more-btn"><a href="#">Подробнее</a></div>
               </div>
             </div>
           </div>
           <div class="cards">
             <div class="cards-image">
-              <img src="images/news-image-1.png" alt="img" />
+              <img src="images/news-image-2.jpg" alt="img" />
             </div>
             <div class="cards-content">
               <div class="cards-content-title">
@@ -592,7 +1070,7 @@
               </p>
               <div class="cards-content-more">
                 <div class="more-date">28.10.2023</div>
-                <div class="more-btn">Подробнее</div>
+                <div class="more-btn"><a href="#">Подробнее</a></div>
               </div>
             </div>
           </div>
@@ -605,25 +1083,7 @@
         <div class="feedbacks-title">Пациенты о нас</div>
 
         <div class="feedbacks-cards">
-          <div class="slide-arrow">
-            <span id="left">
-              <img
-                class="left"
-                src="./images/icons/chevron-down.svg"
-                alt="chevron"
-              />
-            </span>
-
-            <span id="right">
-              <img
-                class="right"
-                src="./images/icons/chevron-down.svg"
-                alt="chevron"
-              />
-            </span>
-          </div>
-
-          <div class="carousel">
+          <div id="owl-carousel-3" class="owl-carousel owl-theme">
             <div class="card">
               <div class="card-header">
                 <span class="author-name">Наргиза</span>
@@ -713,7 +1173,268 @@
 
             <div class="card">
               <div class="card-header">
+                <span class="author-name">Тимур</span>
+                <div class="author-rate">
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#d9d9d9"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-text">
+                <div class="quote-icon">
+                  <img src="images/icons/quote.svg" alt="quote" />
+                </div>
+                <p>
+                  Отношение чуткое. Внимательное. Профессионал своего дела,
+                  любит свою работу и со всей ответственностью относится к ней.
+                  Самый лучший! Желаю Вам здоровья, семейного благополучия,
+                  долгих лет жизни. Низкий Вам поклон!
+                </p>
+
+                <div class="feedback-date">10.12.2022</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="author-name">Анонимно</span>
+                <div class="author-rate">
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#d9d9d9"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-text">
+                <div class="quote-icon">
+                  <img src="images/icons/quote.svg" alt="quote" />
+                </div>
+                <p>
+                  Отношение чуткое. Внимательное. Профессионал своего дела,
+                  любит свою работу и со всей ответственностью относится к ней.
+                  Самый лучший! Желаю Вам здоровья, семейного благополучия,
+                  долгих лет жизни. Низкий Вам поклон!
+                </p>
+
+                <div class="feedback-date">10.12.2022</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
                 <span class="author-name">Наргиза</span>
+                <div class="author-rate">
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#7007ac"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      id="Star 6"
+                      d="M6.42937 0.756229C6.60898 0.203442 7.39102 0.203444 7.57063 0.75623L8.6614 4.11327C8.74173 4.36049 8.9721 4.52786 9.23204 4.52786H12.7618C13.3431 4.52786 13.5847 5.27163 13.1145 5.61327L10.2588 7.68804C10.0485 7.84083 9.96055 8.11165 10.0409 8.35886L11.1316 11.7159C11.3113 12.2687 10.6786 12.7284 10.2083 12.3867L7.35267 10.312C7.14238 10.1592 6.85762 10.1592 6.64733 10.312L3.79166 12.3867C3.32143 12.7284 2.68874 12.2687 2.86835 11.7159L3.95912 8.35886C4.03945 8.11165 3.95145 7.84083 3.74116 7.68804L0.885485 5.61327C0.415257 5.27163 0.656924 4.52786 1.23816 4.52786H4.76796C5.0279 4.52786 5.25827 4.36049 5.3386 4.11327L6.42937 0.756229Z"
+                      fill="#d9d9d9"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-text">
+                <div class="quote-icon">
+                  <img src="images/icons/quote.svg" alt="quote" />
+                </div>
+                <p>
+                  Отношение чуткое. Внимательное. Профессионал своего дела,
+                  любит свою работу и со всей ответственностью относится к ней.
+                  Самый лучший! Желаю Вам здоровья, семейного благополучия,
+                  долгих лет жизни. Низкий Вам поклон!
+                </p>
+
+                <div class="feedback-date">10.12.2022</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="author-name">Тимур</span>
                 <div class="author-rate">
                   <svg
                     width="14"
@@ -887,7 +1608,7 @@
           </div>
 
           <div class="make-feedback">
-            <p>Оставить отзыв</p>
+            <a href="#">Оставить отзыв</a>
           </div>
         </div>
       </div>
@@ -901,11 +1622,13 @@
             href="https://yandex.uz/maps/org/68626133163/?utm_medium=mapframe&utm_source=maps"
             style="color: #eee; font-size: 12px; position: absolute; top: 0px"
             >Surhondaryo viloyat markaziy shifohonasi</a
-          ><a
+          >
+          <a
             href="https://yandex.uz/maps/10338/termez/category/hospital/184105956/?utm_medium=mapframe&utm_source=maps"
             style="color: #eee; font-size: 12px; position: absolute; top: 14px"
             >Kattalar shifoxonasi Termizda</a
-          ><iframe
+          >
+          <iframe
             src="https://yandex.uz/map-widget/v1/?from=mapframe&ll=67.267742%2C37.216747&mode=poi&poi%5Bpoint%5D=67.267732%2C37.215415&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D68626133163&source=mapframe&utm_source=mapframe&z=16"
             width="100%"
             height="500"
@@ -913,7 +1636,8 @@
             allowfullscreen="true"
             style="position: relative"
             class="yandex-map"
-          ></iframe>
+          >
+          </iframe>
         </div>
       </div>
     </section>
@@ -975,8 +1699,10 @@
             </div>
 
             <div class="download-btn">
-              <img src="images/icons/Download Square.svg" alt="icon" />
-              <span>Скачать прайс-лист</span>
+              <a href="#">
+                <img src="images/icons/Download Square.svg" alt="icon" />
+                <span>Скачать прайс-лист</span>
+              </a>
             </div>
           </div>
         </div>
@@ -993,9 +1719,9 @@
 
         <div class="section">
           <div class="section-img">
-            <a href="index.html"
-              ><img src="images/logo-footer.svg" alt="logo"
-            /></a>
+            <a href="index.html">
+              <img src="images/logo-footer.svg" alt="logo" />
+            </a>
           </div>
           <div class="section-text">
             <p>©Mashhura 2023. Все права защищены</p>
@@ -1005,5 +1731,182 @@
     </footer>
 
     <script src="js-files/js.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      const helpBtn = document.getElementById("help-btn-main");
+      helpBtn.addEventListener("click", function () {
+        if (helpBtn.classList.contains("open")) {
+          helpBtn.classList.remove("open");
+          document.querySelector(".help-btn-others").style.display = "none";
+          document.querySelector(".help-btn-others").style.opacity = "0";
+        } else {
+          helpBtn.classList.add("open");
+          document.querySelector(".help-btn-others").style.display = "flex";
+          document.querySelector(".help-btn-others").style.opacity = "1";
+        }
+      });
+
+      $("#owl-carousel-1").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          // 800: {
+          //   items: 2,
+          // },
+          900: {
+            items: 4,
+          },
+          1100: {
+            items: 5,
+          },
+          1300: {
+            items: 6,
+          },
+        },
+      });
+
+      $("#owl-carousel-2").owlCarousel({
+        loop: true,
+        Infinity: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          1200: {
+            items: 2,
+          },
+        },
+      });
+
+      $("#owl-carousel-3").owlCarousel({
+        loop: true,
+        Infinity: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          1200: {
+            items: 3,
+          },
+        },
+      });
+
+      const moreBtn = document.querySelector("#more-cards");
+      moreBtn.addEventListener("click", function () {
+        let slideContent = document.querySelector(".services-cards");
+        let myClone = slideContent.cloneNode(true);
+
+        slideContent.appendChild(myClone);
+      });
+
+      const appointmentTime = document.querySelectorAll(".time");
+      appointmentTime.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          if (btn.classList.contains("active")) {
+            btn.classList.remove("active");
+          } else {
+            btn.classList.add("active");
+          }
+        });
+      });
+
+      const addTime1 = document.querySelector(".add-time1");
+      addTime1.addEventListener("click", function () {
+        const otherTime1 = document.querySelector(".other-time-wrapper1");
+        if (addTime1.classList.contains("added")) {
+          addTime1.classList.remove("added");
+          otherTime1.style.display = "none";
+        } else {
+          addTime1.classList.add("added");
+          otherTime1.style.display = "flex";
+        }
+      });
+
+      const addTime2 = document.querySelector(".add-time2");
+      addTime2.addEventListener("click", function () {
+        const otherTime2 = document.querySelector(".other-time-wrapper2");
+
+        if (addTime2.classList.contains("added")) {
+          addTime2.classList.remove("added");
+          otherTime2.style.display = "none";
+        } else {
+          addTime2.classList.add("added");
+          otherTime2.style.display = "flex";
+        }
+      });
+
+      const addTime3 = document.querySelector(".add-time3");
+      addTime3.addEventListener("click", function () {
+        const otherTime3 = document.querySelector(".other-time-wrapper3");
+
+        if (addTime3.classList.contains("added")) {
+          addTime3.classList.remove("added");
+          otherTime3.style.display = "none";
+        } else {
+          addTime3.classList.add("added");
+          otherTime3.style.display = "flex";
+        }
+      });
+
+      const addTime4 = document.querySelector(".add-time4");
+      addTime4.addEventListener("click", function () {
+        const otherTime4 = document.querySelector(".other-time-wrapper4");
+
+        if (addTime4.classList.contains("added")) {
+          addTime4.classList.remove("added");
+          otherTime4.style.display = "none";
+        } else {
+          addTime4.classList.add("added");
+          otherTime4.style.display = "flex";
+        }
+      });
+
+      const addTime5 = document.querySelector(".add-time5");
+      addTime5.addEventListener("click", function () {
+        const otherTime5 = document.querySelector(".other-time-wrapper5");
+
+        if (addTime5.classList.contains("added")) {
+          addTime5.classList.remove("added");
+          otherTime5.style.display = "none";
+        } else {
+          addTime5.classList.add("added");
+          otherTime5.style.display = "flex";
+        }
+      });
+
+      const addTime6 = document.querySelector(".add-time6");
+      addTime6.addEventListener("click", function () {
+        const otherTime6 = document.querySelector(".other-time-wrapper6");
+
+        if (addTime6.classList.contains("added")) {
+          addTime6.classList.remove("added");
+          otherTime6.style.display = "none";
+        } else {
+          addTime6.classList.add("added");
+          otherTime6.style.display = "flex";
+        }
+      });
+    </script>
   </body>
 </html>
