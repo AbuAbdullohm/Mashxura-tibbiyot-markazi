@@ -1,7 +1,9 @@
+@import "../styles.scss";
+@import "../header.scss";
+@import "../footer.scss";
+
 .specialists-wrapper {
   width: 100%;
-  background: #f9f9f9;
-  padding: 64px 0;
   margin-bottom: 64px;
 }
 
@@ -17,27 +19,20 @@
 
 .specialists-cards {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 
-  .owl-carousel {
+  .carousel {
     display: flex;
-    gap: 24px;
-    margin-bottom: 32px;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    gap: 20px;
 
     .card {
-      height: 450px;
       display: flex;
-      background: #fff;
-      min-width: 610px;
+      background: #f9f9f9;
+      max-width: 600px;
       border-radius: 6px;
-      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
-      scroll-snap-align: start;
-
-      &-main{
-        width: 40%;
-      }
 
       &-img {
         img {
@@ -55,49 +50,11 @@
         padding: 20px;
       }
     }
-
-    .owl-nav {
-      position: absolute;
-      transform: translateY(-73px);
-      display: flex;
-      right: 0;
-      gap: 10px;
-
-      button {
-        cursor: pointer;
-        transition: all 0.3s ease;
-        z-index: 99 !important;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border-radius: 50%;
-  
-        span {
-          position: relative;
-          display: flex;
-          align-items: start;
-          justify-content: center;
-          width: 40px;
-          height: 40px;
-          align-items: center;
-          border-radius: 50%;
-          font-size: 30px;
-          background: red($color: #000000);
-          z-index: 99;
-  
-          &:hover {
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
-          }
-        }
-      }
-    }
-  
-    .owl-dots {
-      display: none;
-    }
   }
 
   .card-description {
     position: relative;
-    padding: 0 10px;
+    padding: 0 16px;
 
     .candidate-degree {
       position: absolute;
@@ -142,10 +99,6 @@
       }
     }
   }
-}
-
-.candidate-wrapper{
-  width: 60%;
 }
 
 .candidate {
@@ -198,13 +151,10 @@
     font-weight: 600;
 
     .left {
-      width: 25px;
       transform: rotate(90deg);
-
     }
 
     .right {
-      width: 25px;
       transform: rotate(270deg);
     }
   }
@@ -235,10 +185,6 @@
       font-size: 16px;
       font-weight: 600;
       line-height: 18px;
-
-      img{
-        width: 25px;
-      }
     }
 
     .other-time-wrapper1,
@@ -246,7 +192,7 @@
     .other-time-wrapper3,
     .other-time-wrapper4,
     .other-time-wrapper5,
-    .other-time-wrapper6{
+    .other-time-wrapper6 {
       display: none;
       gap: 8px;
     }
@@ -257,7 +203,6 @@
     }
 
     .added {
-
       img {
         transform: rotate(180deg);
       }
@@ -270,40 +215,181 @@
   padding: 14px 0;
   border-radius: 8px;
   border: 1px solid #7007ca;
-  cursor: pointer;
 
   color: #7007ca;
   font-size: 16px;
   font-weight: 600;
-  transition: all 0.3s ease;
-
-  &:hover{
-    color: #fff;
-    background: #7007ca;
-  }
 }
 
 .more-specialists {
   width: 100%;
   display: flex;
   justify-content: center;
-  cursor: pointer;
 
-  a {
-    width: max-content;
-    padding: 8px 30px;
+  p {
+    width: 100%;
+    text-align: center;
+    padding: 14px 50px;
     border-radius: 8px;
-    color: #fff;
-    background: #7007ca;
-    text-decoration: none;
+    color: #000;
+    background: #f9f9f9;
 
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 20px;
-    transition: all 0.3s ease;
+  }
+}
 
-    &:hover{
-      background: #8803fd;
+.special-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+
+  &-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &-title {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .special-offers-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .card {
+      position: relative;
+      width: 48%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 8px;
+      background: #e2dcfb;
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 10px;
+
+        &__title {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+
+        &__description {
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 22px;
+          width: 65%;
+          z-index: 99;
+          margin-bottom: 10px;
+        }
+
+        &-btn {
+          width: max-content;
+          background: #fff;
+          padding: 12px;
+          border-radius: 8px;
+        }
+      }
+
+      &-img {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        background: linear-gradient(lightgray -11.017px 0px / 104.926% 100%);
+
+        img {
+          height: 100%;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+.map-section__wrapper {
+  width: 100%;
+  background: #f9f9f9;
+}
+
+.map-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+
+  .map {
+    width: 50%;
+  }
+
+  .form-section {
+    width: 45%;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 34px;
+      letter-spacing: -0.12px;
+      margin-bottom: 24px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+
+      .input {
+        padding: 12px 16px;
+        border: none;
+        background: #fff;
+        border-radius: 6px;
+        border: 1px solid #ededed;
+        margin-bottom: 16px;
+      }
+
+      textarea {
+        padding: 12px 16px;
+        border: none;
+        background: #fff;
+        border-radius: 6px;
+        border: 1px solid #ededed;
+        margin-bottom: 16px;
+
+        .placeholder {
+          display: block !important;
+        }
+      }
+
+      .form-btn {
+        height: 48px;
+        padding: 12px 16px;
+        border: 1px solid #7007ca;
+        border-radius: 6px;
+        color: #fff;
+        background: #7007ca;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      opacity: 0.6;
     }
   }
 }

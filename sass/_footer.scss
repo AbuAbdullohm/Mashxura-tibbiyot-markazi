@@ -114,13 +114,15 @@ footer {
   }
 
   .download-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 25px;
-    background: #fff;
-    border-radius: 8px;
-    cursor: pointer;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 25px;
+      background: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
     span {
       color: #7007ca;

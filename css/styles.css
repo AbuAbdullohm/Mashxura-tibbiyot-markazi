@@ -1,14 +1,12 @@
-@font-face {
-  font-family: "Gilroy-Medium";
-  src: url(Gilroy-Medium.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Manrope:wght@500&family=Montserrat:wght@300;400;500;700;800;900&display=swap");
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gilroy-Medium", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 .container {
@@ -16,12 +14,21 @@
   padding: 0 96px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
   .container {
     padding: 0 70px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 50px;
   }
 }
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */

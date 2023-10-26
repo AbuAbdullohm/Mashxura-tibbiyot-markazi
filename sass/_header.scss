@@ -3,9 +3,15 @@
   justify-content: space-between;
   align-items: center;
   height: 75px;
+  font-family: "Gilroy-Medium", sans-serif;
 
   &-logo {
+    width: 180px;
     cursor: pointer;
+
+    img {
+      width: 100%;
+    }
   }
 
   &-search {
@@ -58,6 +64,11 @@
       font-size: 16px;
       font-weight: 600;
       background: #f9f9f9;
+      transition: all 0.3s ease;
+
+      &:hover{
+        background: #e8e8e8;
+      }
 
       .chevron-down {
         display: flex;
@@ -110,6 +121,10 @@
       display: flex;
       align-items: center;
       gap: 16px;
+
+      @media screen and (max-width:1300px) {
+        gap: 8px;
+      }
     }
   }
 }
@@ -118,18 +133,28 @@
   ul {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
+
+    @media screen and (max-width:1300px) {
+      gap: 10px;
+    }
 
     li {
       display: flex;
       align-items: flex-end;
       gap: 4px;
       cursor: pointer;
+      position: relative;
 
-      a{
+      a {
         display: flex;
         color: #000;
         text-decoration: none;
+        line-height: 52px;
+      }
+
+      .active {
+        border-bottom: 3px solid #7007ca;
       }
     }
   }
@@ -174,11 +199,13 @@
     }
 
     .call-center {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px;
-      border-bottom: 1px solid #ededed;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        border-bottom: 1px solid #ededed;
+      }
 
       div {
         display: flex;
@@ -187,10 +214,12 @@
       }
     }
     .call-phone {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+      }
 
       div {
         display: flex;
@@ -202,12 +231,301 @@
 }
 
 .contact-message {
-  button {
+  a {
     padding: 8px 16px;
     border-radius: 8px;
     color: #ffffff;
     border: 1px solid #7007ca;
     background: #7007ca;
     cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+      background: #8803fd;
+    }
+
+    @media screen and (max-width:1300px) {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
   }
+}
+
+.help-btn {
+  right: 50px;
+  bottom: 50px;
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: self-end;
+  z-index: 999;
+  gap: 12px;
+  transition: opacity 1s ease;
+
+  &-main {
+    display: flex;
+    gap: 5px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    color: #fff;
+    background: #7007ca;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    transition: all 0.3s ease;
+    box-shadow: rgba(255, 255, 255, 0.55) 0px 0px 10px;
+
+    &:hover{
+      background: #8803fd;
+    }
+    
+
+    p,
+    svg {
+      pointer-events: none;
+    }
+  }
+
+  &-others {
+    flex-direction: column-reverse;
+    gap: 12px;
+    align-items: flex-end;
+    display: none;
+    opacity: 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      padding: 12px 20px;
+      border-radius: 50px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 20px;
+      background: #7007ca;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+  width: 500px;
+  max-width: 80%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 24px;
+  z-index: 999;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &-content {
+    width: 100%;
+
+    .modal-subtitle {
+      margin: 0 auto;
+      width: 70%;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #66686c;
+      margin-bottom: 24px;
+    }
+
+    .phone-number {
+      font-size: 16px;
+      font-weight: 550;
+      line-height: 16px;
+    }
+
+    .telephone {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 18px;
+      border: 1px solid #e6e6e6;
+      background: var(--white, #fff);
+      margin-bottom: 12px;
+      outline: none;
+    }
+
+    .modal-btn {
+      width: 100%;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 18px;
+      line-height: 20px;
+      background: #7007ca;
+      border: none;
+      transition: all 0.3s ease;
+
+      &:hover{
+        background: #8803fd;
+      }
+    }
+  }
+} 
+
+.opened {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay {
+  position: fixed;
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  top: 0;
+  right: -100%;
+  bottom: -100%;
+  left: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 990;
+
+  &.opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+
+// Recall modall
+
+
+.recall-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+  width: 400px;
+  max-width: 80%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 24px;
+  z-index: 999;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    .recall-title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &-content {
+    width: 100%;
+
+   
+    .recall-modal__content-subtitle{
+      margin: 20px auto 10px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #575757;
+      margin-bottom: 24px;
+    }
+
+    .recall-telephone{
+      width: 90%;
+      margin: 0 auto 12px;
+      border-bottom: 2px solid #e6e6e6;
+    }
+
+    .recall-phone {
+      width: 100%;
+      padding: 12px 12px 10px;
+      border-radius: 8px;
+      font-size: 18px;
+      border: none;
+      background: #fff;
+      outline: none;
+    }
+
+
+    .recall-modal-btn {
+      width: 100%;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 18px;
+      line-height: 20px;
+      background: #7007ca;
+      border: none;
+      transition: all 0.3s ease;
+
+      &:hover{
+        background: #8803fd;
+      }
+    }
+
+    .recall-modal-subtitle {
+      margin: 20px auto 10px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #66686c;
+      margin-bottom: 24px;
+    }
+
+  }
+} 
+
+.opened {
+  transform: translate(-50%, -50%) scale(1);
 }
