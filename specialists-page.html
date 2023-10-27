@@ -268,6 +268,30 @@
     <section class="specialists-wrapper">
       <div class="specialists container">
         <div class="specialists-title">Специалисты</div>
+        
+        <div class="specialists-filter">
+          <div class="specialists-filter-search">
+            <img src="images/icons/search.svg" alt="img" />
+            <input type="search" placeholder="Поиск по ФИО врача" />
+          </div>
+          <div class="specialists-filter-option">
+
+            <select id="order" >
+              <option selected disabled hidden>Направление врача</option>
+              <option value="2">Направление травматолог</option>
+              <option value="3">Направление терапевт</option>
+              <option value="4">Направление ортопед</option>
+              <option value="5">Направление УЗИ-специалист</option>
+            </select>
+          </div>
+
+          <div class="specialists-filter-selector">
+            <div class="selector-buttons">
+              <button class="selector-btn-1 active" type="submit">Взрослые</button>
+              <button class="selector-btn-2" type="submit">Дети</button>
+            </div>
+          </div>
+        </div>
 
         <div class="specialists-cards">
           <div class="carousel">
@@ -674,7 +698,6 @@
       </div>
 
       <div class="special-offers-cards">
-
         <a href="#" class="card">
           <div class="card-content">
             <div class="card-content__title">Диагностика</div>
@@ -702,7 +725,6 @@
           </div>
         </a>
       </div>
-
     </section>
 
     <section class="map-section__wrapper">

@@ -15,6 +15,94 @@
     font-weight: 900;
     margin-bottom: 32px;
   }
+  
+  &-filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+
+    &-search {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 44px;
+      gap: 12px;
+  
+      img {
+        position: absolute;
+        margin-left: 16px;
+        cursor: pointer;
+      }
+  
+      input {
+        width: 500px;
+        height: 44px;
+        border: 2px solid #ededed;
+        border-radius: 8px;
+        outline: none;
+        padding-left: 44px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+      input[type="search" i]::-webkit-search-cancel-button {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+
+    &-option {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 44px;
+      gap: 12px;
+  
+      
+  
+      select {
+        width: 500px;
+        height: 44px;
+        border: 2px solid #EDEDED;
+        border-radius: 8px;
+        outline: none;
+        padding: 0 16px 0 10px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+
+        i{
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &-selector{
+      .selector-buttons {
+        border: 2px solid #ededed;
+        padding: 3px;
+        border-radius: 8px;
+    
+        button {
+          width: 100px;
+          color: #000000;
+          background-color: #fff;
+          border: none;
+          cursor: pointer;
+          padding: 8px 12px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          border-radius: 8px;
+        }
+    
+        .active {
+          background: #F2F2F3;
+        }
+      }
+    }
+  }
 }
 
 .specialists-cards {
@@ -26,12 +114,13 @@
   .carousel {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
 
     .card {
       display: flex;
       background: #f9f9f9;
-      max-width: 600px;
+      max-width: 610px;
       border-radius: 6px;
 
       &-img {
