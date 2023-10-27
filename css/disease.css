@@ -720,4 +720,61 @@ footer {
 }
 .more-symptoms p:hover {
   background: #e7e7e7;
+}
+
+.appointment {
+  position: relative;
+  border-radius: 8px;
+  background: #ede7fd;
+  padding: 100px 80px;
+  margin-bottom: 64px;
+}
+.appointment-octagon {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.appointment-title {
+  max-width: 70%;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+}
+.appointment-subtitle {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 38px;
+  letter-spacing: -2px;
+}
+.appointment-btn {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 12px 25px;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  background: #7007ca;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.appointment-btn a {
+  color: #fff;
+}
+.appointment-btn:hover {
+  background: #8803fd;
+}
+.appointment-img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 150px;
+  bottom: 0;
+}
+.appointment-img .octagon {
+  position: absolute;
+  transform: translateY(-25px);
 }/*# sourceMappingURL=disease.css.map */
