@@ -310,12 +310,16 @@
 
 //About page map
 
-.about-map-section {
+.map-section__wrapper {
+  width: 100%;
   padding-top: 64px;
   padding-bottom: 64px;
+  background: #f9f9f9;
+}
+
+.about-map-section {
   display: flex;
   justify-content: space-between;
-  background: #f9f9f9;
 
   .about-map {
     width: 50%;
