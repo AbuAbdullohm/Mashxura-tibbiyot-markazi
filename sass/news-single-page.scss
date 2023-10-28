@@ -1,2 +1,275 @@
 @import "header.scss";
 @import "footer.scss";
+
+//Main-content section
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+
+  .big-content {
+    width: 74%;
+
+    &-title {
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 23px;
+    }
+
+    &-img {
+      margin-bottom: 18px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-symptoms {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .symptoms-title {
+        font-size: 32px;
+        font-weight: 600;
+      }
+
+      .symptoms-items {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .text {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    &-link {
+      padding: 10px 16px;
+      margin-top: 16px;
+      font-size: 24px;
+      font-weight: 550;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      background: rgba(112, 7, 202, 0.1);
+
+      a {
+        font-weight: 600;
+        color: #7007ca;
+      }
+    }
+
+    .date {
+      color: #66686c;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .small-content {
+    width: 24%;
+    margin-top: 20px;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    &-cards {
+      margin-top: 22px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+
+        &-title {
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        &-text,
+        &-date {
+          color: #66686c;
+          font-size: 16px;
+          font-weight: 400;
+
+          .more-btn {
+            margin-left: 16px;
+            padding: 5px 16px;
+            border-radius: 6px;
+            border: 1px solid #7007ca;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: #7007ca;
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Services section
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+
+  &-title {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+  }
+}
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+
+  .card {
+    width: 49%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    color: #000;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #e7e7e7;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      &__title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.more-cards {
+  width: 100%;
+  padding: 15px 16px;
+  background: #f9f9f9;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #e7e7e7;
+  }
+}
+
+//Map section
+
+.map-section__wrapper {
+  width: 100%;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background: #f9f9f9;
+}
+
+.map-section {
+  display: flex;
+  justify-content: space-between;
+
+  .map {
+    width: 50%;
+  }
+
+  .form-section {
+    width: 45%;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 34px;
+      letter-spacing: -0.12px;
+      margin-bottom: 24px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+
+      .input {
+        padding: 12px 16px;
+        border: none;
+        background: #fff;
+        border-radius: 6px;
+        border: 1px solid #ededed;
+        margin-bottom: 16px;
+      }
+
+      input:focus-visible {
+        outline: 1px solid gold;
+      }
+
+      textarea {
+        padding: 12px 16px;
+        border: none;
+        background: #fff;
+        border-radius: 6px;
+        border: 1px solid #ededed;
+        margin-bottom: 16px;
+      }
+
+      textarea:focus-visible {
+        outline: 1px solid gold;
+      }
+
+      .form-btn {
+        height: 48px;
+        padding: 12px 16px;
+        border: 1px solid #7007ca;
+        border-radius: 6px;
+        color: #fff;
+        background: #7007ca;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #ab4bff;
+        }
+      }
+    }
+
+    &-subtitle {
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      opacity: 0.6;
+    }
+  }
+}
