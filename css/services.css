@@ -78,6 +78,9 @@ a {
   margin-right: 10px;
   cursor: pointer;
 }
+.header-search input:focus-visible {
+  outline: 1px solid gold;
+}
 .header-lang {
   position: relative;
   display: flex;
