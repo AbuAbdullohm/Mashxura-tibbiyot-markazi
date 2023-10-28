@@ -10,17 +10,17 @@ langBtn.addEventListener("click", function () {
 });
 
 const helpBtn = document.getElementById("help-btn-main");
-      helpBtn.addEventListener("click", function () {
-        if (helpBtn.classList.contains("open")) {
-          helpBtn.classList.remove("open");
-          document.querySelector(".help-btn-others").style.display = "none";
-          document.querySelector(".help-btn-others").style.opacity = "0";
-        } else {
-          helpBtn.classList.add("open");
-          document.querySelector(".help-btn-others").style.display = "flex";
-          document.querySelector(".help-btn-others").style.opacity = "1";
-        }
-      });
+helpBtn.addEventListener("click", function () {
+  if (helpBtn.classList.contains("open")) {
+    helpBtn.classList.remove("open");
+    document.querySelector(".help-btn-others").style.display = "none";
+    document.querySelector(".help-btn-others").style.opacity = "0";
+  } else {
+    helpBtn.classList.add("open");
+    document.querySelector(".help-btn-others").style.display = "flex";
+    document.querySelector(".help-btn-others").style.opacity = "1";
+  }
+});
 
 document.onclick = function (e) {
   if (
@@ -107,7 +107,6 @@ function closeModal(modal) {
   modal.classList.remove("opened");
   overlay.classList.remove("opened");
 }
-
 
 function toggleActiveClass(event) {
   let items = document.getElementsByClassName("item-btn");
