@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/about-us-page.css" />
     <title>MASHHURA</title>
@@ -435,25 +442,8 @@
         </div>
 
         <div class="photo-slider">
-          <div class="slide-arrow">
-            <span id="left">
-              <img
-                class="left"
-                src="./images/icons/chevron-down.svg"
-                alt="chevron"
-              />
-            </span>
 
-            <span id="right">
-              <img
-                class="right"
-                src="./images/icons/chevron-down.svg"
-                alt="chevron"
-              />
-            </span>
-          </div>
-
-          <div class="photos">
+          <div id="owl-carousel" class="owl-carousel">
             <div class="photo-item">
               <img src="images/photogallary-1.png" alt="photo" />
             </div>
@@ -627,5 +617,35 @@
     </footer>
 
     <script src="js-files/js.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $("#owl-carousel").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        mouseDrag: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          800: {
+            items: 2,
+          }
+        },
+      });
+    </script>
   </body>
 </html>
