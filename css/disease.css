@@ -765,7 +765,7 @@ footer {
 }
 
 .map-section {
-  margin-bottom: 64px;
+  margin-bottom: 64px !important;
 }
 .map-section .map-title {
   font-size: 40px;
