@@ -770,7 +770,6 @@ footer {
   margin: 5px 10px;
   background: var(--black-white-white, #fff);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
-  scroll-snap-align: start;
   padding: 16px;
   gap: 8px;
   width: 185px;
@@ -995,9 +994,6 @@ footer {
   display: flex;
   gap: 24px;
   margin-bottom: 32px;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
 }
 .specialists-cards .owl-carousel .card {
   height: 450px;
