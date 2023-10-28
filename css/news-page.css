@@ -468,20 +468,6 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-.map-section {
-  margin-bottom: 64px;
-}
-.map-section .map-title {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 32px;
-  margin-bottom: 32px;
-}
-
-.yandex-map .popup {
-  display: none !important;
-}
-
 footer {
   width: 100%;
   background: #7007ca;
@@ -777,4 +763,14 @@ footer {
 .appointment-img .octagon {
   position: absolute;
   transform: translateY(-25px);
+}
+
+.map-section {
+  margin-bottom: 64px;
+}
+.map-section .map-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 32px;
 }/*# sourceMappingURL=news-page.css.map */

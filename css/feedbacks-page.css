@@ -468,292 +468,6 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-.map-section {
-  margin-bottom: 64px;
-}
-.map-section .map-title {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 32px;
-  margin-bottom: 32px;
-}
-
-.yandex-map .popup {
-  display: none !important;
-}
-
-.specialists-wrapper {
-  width: 100%;
-  background: #f9f9f9;
-  padding: 64px 0;
-  margin-bottom: 64px;
-}
-
-.specialists {
-  position: relative;
-}
-.specialists-title {
-  font-size: 40px;
-  font-weight: 900;
-  margin-bottom: 32px;
-}
-
-.specialists-cards {
-  position: relative;
-}
-.specialists-cards .owl-carousel {
-  display: flex;
-  gap: 24px;
-  margin-bottom: 32px;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-.specialists-cards .owl-carousel .card {
-  height: 450px;
-  display: flex;
-  background: #fff;
-  min-width: 610px;
-  border-radius: 6px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
-  scroll-snap-align: start;
-}
-.specialists-cards .owl-carousel .card-main {
-  width: 40%;
-}
-.specialists-cards .owl-carousel .card-img img {
-  border-bottom: 2px solid #f9f9f9;
-}
-.specialists-cards .owl-carousel .card-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.specialists-cards .owl-carousel .card .candidate-wrapper {
-  padding: 20px;
-}
-.specialists-cards .owl-carousel .owl-nav {
-  position: absolute;
-  transform: translateY(-73px);
-  display: flex;
-  right: 0;
-  gap: 10px;
-}
-.specialists-cards .owl-carousel .owl-nav button {
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 99 !important;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 50%;
-}
-.specialists-cards .owl-carousel .owl-nav button span {
-  position: relative;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 30px;
-  background: 0;
-  z-index: 99;
-}
-.specialists-cards .owl-carousel .owl-nav button span:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
-}
-.specialists-cards .owl-carousel .owl-dots {
-  display: none;
-}
-.specialists-cards .card-description {
-  position: relative;
-  padding: 0 10px;
-}
-.specialists-cards .card-description .candidate-degree {
-  position: absolute;
-  transform: translateX(-10px) translateY(-18px);
-  color: #fff;
-  padding: 4px 16px;
-  border-radius: 6px;
-  background: #7007ca;
-  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.14);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-}
-.specialists-cards .card-description .candidate-seniority {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 18px;
-}
-.specialists-cards .card-description .consult-price {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 24px;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #ededed;
-}
-.specialists-cards .card-description .consult-price .price-title {
-  color: rgba(0, 4, 10, 0.5);
-  font-size: 14px;
-  font-weight: 400;
-}
-.specialists-cards .card-description .consult-price .price {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.candidate-wrapper {
-  width: 60%;
-}
-
-.candidate {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-.candidate-name {
-  font-size: 20px;
-  font-weight: 700;
-}
-.candidate-specialty {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.candidate-specialty span {
-  padding: 8px 10px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
-}
-
-.appointment-time {
-  padding: 10px 16px 20px;
-  border-radius: 8px;
-  border: 1px solid #7007ca;
-  text-align: center;
-  margin-bottom: 16px;
-}
-.appointment-time .appointment-title {
-  display: block;
-  margin-bottom: 15px;
-  font-size: 12px;
-  font-weight: 400;
-  opacity: 0.8;
-}
-.appointment-time .appointment-day {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  font-size: 16px;
-  font-weight: 600;
-}
-.appointment-time .appointment-day .left {
-  width: 25px;
-  transform: rotate(90deg);
-}
-.appointment-time .appointment-day .right {
-  width: 25px;
-  transform: rotate(270deg);
-}
-.appointment-time .appointment-clock {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.appointment-time .appointment-clock .time,
-.appointment-time .appointment-clock .add-time1,
-.appointment-time .appointment-clock .add-time2,
-.appointment-time .appointment-clock .add-time3,
-.appointment-time .appointment-clock .add-time4,
-.appointment-time .appointment-clock .add-time5,
-.appointment-time .appointment-clock .add-time6 {
-  width: 60px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  border-radius: 4px;
-  color: #fff;
-  background: #7007ca;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 18px;
-}
-.appointment-time .appointment-clock .time img,
-.appointment-time .appointment-clock .add-time1 img,
-.appointment-time .appointment-clock .add-time2 img,
-.appointment-time .appointment-clock .add-time3 img,
-.appointment-time .appointment-clock .add-time4 img,
-.appointment-time .appointment-clock .add-time5 img,
-.appointment-time .appointment-clock .add-time6 img {
-  width: 25px;
-}
-.appointment-time .appointment-clock .other-time-wrapper1,
-.appointment-time .appointment-clock .other-time-wrapper2,
-.appointment-time .appointment-clock .other-time-wrapper3,
-.appointment-time .appointment-clock .other-time-wrapper4,
-.appointment-time .appointment-clock .other-time-wrapper5,
-.appointment-time .appointment-clock .other-time-wrapper6 {
-  display: none;
-  gap: 8px;
-}
-.appointment-time .appointment-clock .active {
-  border-radius: 4px;
-  background: rgba(112, 7, 202, 0.2);
-}
-.appointment-time .appointment-clock .added img {
-  transform: rotate(180deg);
-}
-
-.candidate-more {
-  text-align: center;
-  padding: 14px 0;
-  border-radius: 8px;
-  border: 1px solid #7007ca;
-  cursor: pointer;
-  color: #7007ca;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.candidate-more:hover {
-  color: #fff;
-  background: #7007ca;
-}
-
-.more-specialists {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.more-specialists a {
-  width: -moz-max-content;
-  width: max-content;
-  padding: 8px 30px;
-  border-radius: 8px;
-  color: #fff;
-  background: #7007ca;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  transition: all 0.3s ease;
-}
-.more-specialists a:hover {
-  background: #8803fd;
-}
-
 footer {
   width: 100%;
   background: #7007ca;
@@ -1114,6 +828,278 @@ footer {
 }
 .make-feedback .form .form-btn:hover {
   background: #ab4bff;
+}
+
+.specialists-wrapper {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 64px 0;
+  margin-bottom: 64px;
+}
+
+.specialists {
+  position: relative;
+}
+.specialists-title {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 32px;
+}
+
+.specialists-cards {
+  position: relative;
+}
+.specialists-cards .owl-carousel {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.specialists-cards .owl-carousel .card {
+  height: 450px;
+  display: flex;
+  background: #fff;
+  min-width: 610px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: start;
+}
+.specialists-cards .owl-carousel .card-main {
+  width: 40%;
+}
+.specialists-cards .owl-carousel .card-img img {
+  border-bottom: 2px solid #f9f9f9;
+}
+.specialists-cards .owl-carousel .card-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.specialists-cards .owl-carousel .card .candidate-wrapper {
+  padding: 20px;
+}
+.specialists-cards .owl-carousel .owl-nav {
+  position: absolute;
+  transform: translateY(-73px);
+  display: flex;
+  right: 0;
+  gap: 10px;
+}
+.specialists-cards .owl-carousel .owl-nav button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 99 !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 50%;
+}
+.specialists-cards .owl-carousel .owl-nav button span {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+  background: 0;
+  z-index: 99;
+}
+.specialists-cards .owl-carousel .owl-nav button span:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
+}
+.specialists-cards .owl-carousel .owl-dots {
+  display: none;
+}
+.specialists-cards .card-description {
+  position: relative;
+  padding: 0 10px;
+}
+.specialists-cards .card-description .candidate-degree {
+  position: absolute;
+  transform: translateX(-10px) translateY(-18px);
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 6px;
+  background: #7007ca;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.14);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.specialists-cards .card-description .candidate-seniority {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.specialists-cards .card-description .consult-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ededed;
+}
+.specialists-cards .card-description .consult-price .price-title {
+  color: rgba(0, 4, 10, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+}
+.specialists-cards .card-description .consult-price .price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.candidate-wrapper {
+  width: 60%;
+}
+
+.candidate {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.candidate-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+.candidate-specialty {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.candidate-specialty span {
+  padding: 8px 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-time {
+  padding: 10px 16px 20px;
+  border-radius: 8px;
+  border: 1px solid #7007ca;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.appointment-time .appointment-title {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.appointment-time .appointment-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.appointment-time .appointment-day .left {
+  width: 25px;
+  transform: rotate(90deg);
+}
+.appointment-time .appointment-day .right {
+  width: 25px;
+  transform: rotate(270deg);
+}
+.appointment-time .appointment-clock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.appointment-time .appointment-clock .time,
+.appointment-time .appointment-clock .add-time1,
+.appointment-time .appointment-clock .add-time2,
+.appointment-time .appointment-clock .add-time3,
+.appointment-time .appointment-clock .add-time4,
+.appointment-time .appointment-clock .add-time5,
+.appointment-time .appointment-clock .add-time6 {
+  width: 60px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 4px;
+  color: #fff;
+  background: #7007ca;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.appointment-time .appointment-clock .time img,
+.appointment-time .appointment-clock .add-time1 img,
+.appointment-time .appointment-clock .add-time2 img,
+.appointment-time .appointment-clock .add-time3 img,
+.appointment-time .appointment-clock .add-time4 img,
+.appointment-time .appointment-clock .add-time5 img,
+.appointment-time .appointment-clock .add-time6 img {
+  width: 25px;
+}
+.appointment-time .appointment-clock .other-time-wrapper1,
+.appointment-time .appointment-clock .other-time-wrapper2,
+.appointment-time .appointment-clock .other-time-wrapper3,
+.appointment-time .appointment-clock .other-time-wrapper4,
+.appointment-time .appointment-clock .other-time-wrapper5,
+.appointment-time .appointment-clock .other-time-wrapper6 {
+  display: none;
+  gap: 8px;
+}
+.appointment-time .appointment-clock .active {
+  border-radius: 4px;
+  background: rgba(112, 7, 202, 0.2);
+}
+.appointment-time .appointment-clock .added img {
+  transform: rotate(180deg);
+}
+
+.candidate-more {
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 8px;
+  border: 1px solid #7007ca;
+  cursor: pointer;
+  color: #7007ca;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.candidate-more:hover {
+  color: #fff;
+  background: #7007ca;
+}
+
+.more-specialists {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.more-specialists a {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px 30px;
+  border-radius: 8px;
+  color: #fff;
+  background: #7007ca;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  transition: all 0.3s ease;
+}
+.more-specialists a:hover {
+  background: #8803fd;
 }
 
 .map-section {

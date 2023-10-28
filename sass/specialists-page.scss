@@ -1,6 +1,5 @@
-@import "../styles.scss";
-@import "../header.scss";
-@import "../footer.scss";
+@import "header.scss";
+@import "footer.scss";
 
 .specialists-wrapper {
   width: 100%;
@@ -367,7 +366,7 @@
 
     .card {
       position: relative;
-      width: 48%;
+      width: 49%;
       display: flex;
       align-items: center;
       gap: 16px;
