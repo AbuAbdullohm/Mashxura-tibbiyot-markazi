@@ -176,6 +176,7 @@
   color: #66686c;
 }
 .contact-menu .contact-numbers strong {
+  font-weight: 600;
   color: #323232;
 }
 .contact-menu .contact-numbers .call-center a {
